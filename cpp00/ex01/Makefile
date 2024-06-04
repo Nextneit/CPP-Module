@@ -1,4 +1,4 @@
-NAME = 
+NAME = Phonebook
 
 CC = c++
 
@@ -6,7 +6,7 @@ FLAGS = -Wall -Wextra -Werror -std=c++98
 
 RM = rm -rf
 
-SRCS = 
+SRCS = main.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
