@@ -6,25 +6,30 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/03 14:59:57 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/06/04 15:28:09 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/06/05 16:47:29 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/Phonebook.hpp"
+#include "include/Phonebook.hpp"
 
 int main(void)
 {
 	Phonebook	agenda;
 	std::string	input;
 
-    while(1)
+	agenda.init();
+    while(input != "EXIT")
 	{
-		std::cout << "-- ADD --" << std::endl;
-		std::cout << "-- SEARCH --" << std::endl;
-		std::cout << "-- EXIT --" << std::endl;
-		std::cout << ">";
-		std::cin >> input;
-		std::cout << input << std::endl;
+		std::cout << "-ADD" << std::endl;
+		std::cout << "-SEARCH" << std::endl;
+		std::cout << "-EXIT" << std::endl;
+		std::cout << "> ";
+		if (!std::getline(std::cin, input, '\n'))
+			return (0);
+		if (input == "ADD")
+			agenda.new_contact();
+		if (input == "SEARCH")
+			agend.search_contact();
 	}
 	return (0);
 }

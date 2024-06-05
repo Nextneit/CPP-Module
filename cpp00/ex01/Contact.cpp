@@ -1,27 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Phonebook.hpp                                      :+:      :+:    :+:   */
+/*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/03 17:15:48 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/06/05 15:48:32 by ncruz-ga         ###   ########.fr       */
+/*   Created: 2024/06/05 14:27:52 by ncruz-ga          #+#    #+#             */
+/*   Updated: 2024/06/05 16:26:52 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
+#include "include/Phonebook.hpp"
 
-# include "Contact.hpp"
+void	Contact::add_name(std::string str)
+{
+	this->name = str;
+}
 
-class Phonebook{
-    
-    private:
-        Contact		contacts[8];
-        int         index;
-    public:
-        void    init();
-        void    new_contact();
-};
-#endif
+void	Contact::add_last_name(std::string str)
+{
+	this->last_name = str;
+}
+
+void	Contact::add_nickname(std::string str)
+{
+	this->nickname = str;
+}
+
+void	Contact::add_phone_number(std::string nbr)
+{
+	this->phone = nbr;
+}
+
+void	Contact::add_secret(std::string str)
+{
+	this->secret = str;
+}
