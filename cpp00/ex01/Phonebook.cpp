@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 18:29:20 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/06/06 17:02:38 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/06/06 17:23:35 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ static int	check_nbr(std::string nbr)
 
 void	Phonebook::search_contact()
 {
-	int	i;
+	int			i;
+	std::string	input;
 
 	i = 0;
 	if (this->index == 0)
@@ -38,12 +39,12 @@ void	Phonebook::search_contact()
 	}
 	std::cout << " ___________________________________________\n";
 	std::cout << "|          |          |          |          |\n";
-	std::cout << "|INDEX     |NAME      |LAST NAME |NICKNAME  |\n";
+	std::cout << "|     INDEX|      NAME| LAST NAME|  NICKNAME|\n";
 	std::cout << "|__________|__________|__________|__________|\n";
 	while (i < this->index)
 	{
 		std::cout << "|          |          |          |          |\n";
-		std::cout << "|" << i + 1 << "         |";
+		std::cout << "|         " << i + 1 << "|";
 		this->contacts[i].print_name();
 		this->contacts[i].print_last_name();
 		this->contacts[i].print_nickname();
@@ -51,6 +52,10 @@ void	Phonebook::search_contact()
 		std::cout << "|__________|__________|__________|__________|\n";
 		i++;
 	}
+	std::cout << "\nSelect contact\n> ";
+	if (!std::getline(std::cin, input, '\n'))
+		return ;
+	
 	return ;
 }
 

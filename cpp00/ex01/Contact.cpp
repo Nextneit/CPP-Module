@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 14:27:52 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/06/06 16:56:30 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/06/06 17:26:14 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,14 +57,15 @@ void	Contact::print_name()
 	}
 	else
 	{
+		while (i < 10 - len)
+		{
+			std::cout << " ";
+			i++;
+		}
+		i = 0;
 		while (i <= len)
 		{
 			std::cout << str[i];
-			i++;
-		}
-		while (i <= 10)
-		{
-			std::cout << " ";
 			i++;
 		}
 	}
@@ -91,14 +92,15 @@ void	Contact::print_last_name()
 	}
 	else
 	{
+		while (i < 10 - len)
+		{
+			std::cout << " ";
+			i++;
+		}
+		i = 0;
 		while (i <= len)
 		{
 			std::cout << str[i];
-			i++;
-		}
-		while (i <= 10)
-		{
-			std::cout << " ";
 			i++;
 		}
 	}
@@ -125,14 +127,15 @@ void	Contact::print_nickname()
 	}
 	else
 	{
+		while (i < 10 - len)
+		{
+			std::cout << " ";
+			i++;
+		}
+		i = 0;
 		while (i <= len)
 		{
 			std::cout << str[i];
-			i++;
-		}
-		while (i <= 10)
-		{
-			std::cout << " ";
 			i++;
 		}
 	}
