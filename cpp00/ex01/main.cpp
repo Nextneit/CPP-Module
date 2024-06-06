@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/03 14:59:57 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/06/05 16:47:29 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/06/06 15:52:46 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int main(void)
 		if (input == "ADD")
 			agenda.new_contact();
 		if (input == "SEARCH")
-			agend.search_contact();
+			agenda.search_contact();
 	}
 	return (0);
 }

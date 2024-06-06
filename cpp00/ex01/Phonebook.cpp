@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 18:29:20 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/06/05 16:47:57 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/06/06 17:02:38 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,44 @@ static int	check_nbr(std::string nbr)
 
 void	Phonebook::search_contact()
 {
-	
+	int	i;
+
+	i = 0;
+	if (this->index == 0)
+	{
+		std::cout << "Empty phonebook\n";
+		return ;
+	}
+	std::cout << " ___________________________________________\n";
+	std::cout << "|          |          |          |          |\n";
+	std::cout << "|INDEX     |NAME      |LAST NAME |NICKNAME  |\n";
+	std::cout << "|__________|__________|__________|__________|\n";
+	while (i < this->index)
+	{
+		std::cout << "|          |          |          |          |\n";
+		std::cout << "|" << i + 1 << "         |";
+		this->contacts[i].print_name();
+		this->contacts[i].print_last_name();
+		this->contacts[i].print_nickname();
+		std::cout << std::endl;
+		std::cout << "|__________|__________|__________|__________|\n";
+		i++;
+	}
+	return ;
+}
+
+void	Phonebook::reorder()
+{
+	int		i;
+	Contact	aux;
+
+	i = 0;
+	while (i < 7)
+	{
+		this->contacts[i] = this->contacts[i + 1];
+		i++;
+	}
+	this->contacts[7] = aux;
 }
 
 void	Phonebook::new_contact()
@@ -36,7 +73,12 @@ void	Phonebook::new_contact()
 	std::string	input;
 	static int	i = 0;
 
-	std::cout << "Insert name\n> ";
+	if (i == 8)
+	{
+		i = 0;
+		std::cout << "\nDeleting oldest contact\n\n";
+	}
+	std::cout << "\nInsert name\n> ";
 	if (!std::getline(std::cin, input, '\n'))
 		return ;
 	while (input[0] == '\0')
@@ -46,7 +88,7 @@ void	Phonebook::new_contact()
 			return ;
 	}
 	this->contacts[i].add_name(input);
-	std::cout << "Insert last name\n> ";
+	std::cout << "\nInsert last name\n> ";
 	if (!std::getline(std::cin, input, '\n'))
 		return ;
 	while (input[0] == '\0')
@@ -56,7 +98,7 @@ void	Phonebook::new_contact()
 			return ;
 	}
 	this->contacts[i].add_last_name(input);
-	std::cout << "Insert nickname\n> ";
+	std::cout << "\nInsert nickname\n> ";
 	if (!std::getline(std::cin, input, '\n'))
 		return ;
 	while (input[0] == '\0')
@@ -66,7 +108,7 @@ void	Phonebook::new_contact()
 			return ;
 	}
 	this->contacts[i].add_nickname(input);
-	std::cout << "Insert phone number\n> ";
+	std::cout << "\nInsert phone number\n> ";
 	if (!std::getline(std::cin, input, '\n'))
 		return ;
 	while (input[0] == '\0' || check_nbr(input) == 1 || input.length() > 9)
@@ -76,7 +118,7 @@ void	Phonebook::new_contact()
 			return ;
 	}
 	this->contacts[i].add_phone_number(input);
-	std::cout << "Insert darkest secret\n> ";
+	std::cout << "\nInsert darkest secret\n> ";
 	if (!std::getline(std::cin, input, '\n'))
 		return ;
 	while (input[0] == '\0')
@@ -86,8 +128,13 @@ void	Phonebook::new_contact()
 			return ;
 	}
 	this->contacts[i].add_secret(input);
+	std::cout << std::endl;
 	if (i != 8)
 		i++;
+	if (this->index != 8)
+		this->index = i;
+	else
+		this->reorder();
 	
 }
 

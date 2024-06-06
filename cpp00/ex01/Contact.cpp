@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 14:27:52 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/06/05 16:26:52 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/06/06 16:56:30 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,106 @@ void	Contact::add_phone_number(std::string nbr)
 void	Contact::add_secret(std::string str)
 {
 	this->secret = str;
+}
+
+void	Contact::print_name()
+{
+	int			i;
+	int			len;
+	std::string	str;
+
+	str = this->name;
+	i = 0;
+	len = str.length();
+	if (len > 10)
+	{
+		while (i < 9)
+		{
+			std::cout << str[i];
+			i++;
+		}
+		std::cout << ".";
+	}
+	else
+	{
+		while (i <= len)
+		{
+			std::cout << str[i];
+			i++;
+		}
+		while (i <= 10)
+		{
+			std::cout << " ";
+			i++;
+		}
+	}
+	std::cout << "|";
+}
+
+void	Contact::print_last_name()
+{
+	int			i;
+	int			len;
+	std::string	str;
+
+	str = this->last_name;
+	i = 0;
+	len = str.length();
+	if (len > 10)
+	{
+		while (i < 9)
+		{
+			std::cout << str[i];
+			i++;
+		}
+		std::cout << ".";
+	}
+	else
+	{
+		while (i <= len)
+		{
+			std::cout << str[i];
+			i++;
+		}
+		while (i <= 10)
+		{
+			std::cout << " ";
+			i++;
+		}
+	}
+	std::cout << "|";
+}
+
+void	Contact::print_nickname()
+{
+	int			i;
+	int			len;
+	std::string	str;
+
+	str = this->nickname;
+	i = 0;
+	len = str.length();
+	if (len > 10)
+	{
+		while (i < 9)
+		{
+			std::cout << str[i];
+			i++;
+		}
+		std::cout << ".";
+	}
+	else
+	{
+		while (i <= len)
+		{
+			std::cout << str[i];
+			i++;
+		}
+		while (i <= 10)
+		{
+			std::cout << " ";
+			i++;
+		}
+	}
+	std::cout << "|";
 }
