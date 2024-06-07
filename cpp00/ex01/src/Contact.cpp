@@ -6,11 +6,11 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 14:27:52 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/06/07 13:33:35 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/06/07 16:41:04 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/Phonebook.hpp"
+#include "../include/Phonebook.hpp"
 
 void	Contact::add_name(std::string str)
 {

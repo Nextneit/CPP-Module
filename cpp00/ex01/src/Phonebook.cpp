@@ -6,11 +6,11 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 18:29:20 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/06/07 15:43:51 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/06/07 16:41:10 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/Phonebook.hpp"
+#include "../include/Phonebook.hpp"
 
 static int	check_nbr(std::string nbr)
 {
