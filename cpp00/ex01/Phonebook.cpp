@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 18:29:20 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/06/07 13:03:20 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/06/07 15:43:51 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	Phonebook::search_contact()
 
 	i = 0;
 	j = -1;
-	if (this->index == 0)
+	if (this->index == -1)
 	{
 		std::cout << "Empty phonebook\n";
 		return ;
@@ -43,7 +43,7 @@ void	Phonebook::search_contact()
 	std::cout << "|          |          |          |          |\n";
 	std::cout << "|     INDEX|      NAME| LAST NAME|  NICKNAME|\n";
 	std::cout << "|__________|__________|__________|__________|\n";
-	while (i < this->index)
+	while (i <= this->index)
 	{
 		std::cout << "|          |          |          |          |\n";
 		std::cout << "|         " << i + 1 << "|";
@@ -55,21 +55,18 @@ void	Phonebook::search_contact()
 		i++;
 	}
 	std::cout << "\nSelect contact\n> ";
-	if (!std::getline(std::cin, input, '\n'))
-		return ;
-	if (check_nbr(input) == 0)
-		std::cin >> j;
-	while (j <= 0 || j > this->index + 1)
+	if (!std::getline(std::cin, input))
+			return;
+	j = std::atoi(input.c_str());
+	while (j <= 0 || j > this->index + 1 || check_nbr(input) == 1)
 	{
 		std::cout << "Invalid index\nSelect contact\n> ";
-		if (!std::getline(std::cin, input, '\n'))
-			return ;
-		if (check_nbr(input) == 0)
-			std::cin >> j;
-		else
-			j = -1;
+		j = -1;
+		if (!std::getline(std::cin, input))
+			return;
+		j = std::atoi(input.c_str());
 	}
-	this->contacts[j].show_contact();
+	this->contacts[j - 1].show_contact();
 }
 
 void	Phonebook::reorder()
@@ -78,6 +75,7 @@ void	Phonebook::reorder()
 	Contact	aux;
 
 	i = 0;
+	aux = this->contacts[0];
 	while (i < 7)
 	{
 		this->contacts[i] = this->contacts[i + 1];
@@ -91,10 +89,10 @@ void	Phonebook::new_contact()
 	std::string	input;
 	static int	i = 0;
 
-	if (i == 8)
+	if (this->index == 7)
 	{
 		i = 0;
-		std::cout << "\nDeleting oldest contact\n\n";
+		std::cout << "\nDeleting oldest contact\n";
 	}
 	std::cout << "\nInsert name\n> ";
 	if (!std::getline(std::cin, input, '\n'))
@@ -147,7 +145,7 @@ void	Phonebook::new_contact()
 	}
 	this->contacts[i].add_secret(input);
 	std::cout << std::endl;
-	if (this->index != 8)
+	if (this->index != 7)
 		this->index = i;
 	else
 		this->reorder();
@@ -157,5 +155,5 @@ void	Phonebook::new_contact()
 
 void	Phonebook::init()
 {
-	this->index = 0;
+	this->index = -1;
 }
