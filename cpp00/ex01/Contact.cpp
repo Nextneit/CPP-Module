@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 14:27:52 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/06/06 17:26:14 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/06/07 13:00:19 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -140,4 +140,13 @@ void	Contact::print_nickname()
 		}
 	}
 	std::cout << "|";
+}
+
+void	Contact::show_contact()
+{
+	std::cout << "\nName          -" << this->name;
+	std::cout << "\nLast name     -" << this->last_name;
+	std::cout << "\nNickname      -" << this->nickname;
+	std::cout << "\nPhone number  -" << this->phone;
+	std::cout << "\nDarkest secret-" << this->secret << std::endl << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 18:29:20 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/06/06 17:23:35 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/06/07 13:03:20 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,10 @@ void	Phonebook::search_contact()
 {
 	int			i;
 	std::string	input;
+	int			j;
 
 	i = 0;
+	j = -1;
 	if (this->index == 0)
 	{
 		std::cout << "Empty phonebook\n";
@@ -55,8 +57,19 @@ void	Phonebook::search_contact()
 	std::cout << "\nSelect contact\n> ";
 	if (!std::getline(std::cin, input, '\n'))
 		return ;
-	
-	return ;
+	if (check_nbr(input) == 0)
+		std::cin >> j;
+	while (j <= 0 || j > this->index + 1)
+	{
+		std::cout << "Invalid index\nSelect contact\n> ";
+		if (!std::getline(std::cin, input, '\n'))
+			return ;
+		if (check_nbr(input) == 0)
+			std::cin >> j;
+		else
+			j = -1;
+	}
+	this->contacts[j].show_contact();
 }
 
 void	Phonebook::reorder()
@@ -134,13 +147,12 @@ void	Phonebook::new_contact()
 	}
 	this->contacts[i].add_secret(input);
 	std::cout << std::endl;
-	if (i != 8)
-		i++;
 	if (this->index != 8)
 		this->index = i;
 	else
 		this->reorder();
-	
+	if (i != 8)
+		i++;
 }
 
 void	Phonebook::init()

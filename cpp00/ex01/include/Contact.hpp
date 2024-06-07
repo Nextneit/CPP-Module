@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 15:10:14 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/06/06 16:57:39 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/06/07 12:56:05 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ class Contact{
 		void	print_name();
 		void	print_last_name();
 		void	print_nickname();
+		void	show_contact();
 };
 
 #endif
