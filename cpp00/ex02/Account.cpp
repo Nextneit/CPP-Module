@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 15:57:48 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/06/07 17:53:31 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/06/10 12:22:57 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,18 +41,29 @@ void	Account::displayAccountsInfos()
 bool	Account::makeWithdrawal(int wd)
 {
 	_displayTimestamp();
-	std::cout << "index:" << _accountIndex << ";p_amount:" << _amount;
+	std::cout << "index:" << _accountIndex << ";p_amount:" << _amount << ";withdrawal";
+	if (wd > _amount)
+	{
+		std::cout << "refused"
+		return false;
+	}
+	_amount -= wd;
+	_nbWithdrawals += 1;
+	std::cout << ";amount:" << amount << ";nb_withdrawals:" << _nbWithdrawals;
+	_totalNbWithdrawals += 1;
+	_totalAmount -= wd;
+	return true;
 }
 
 void	Account::makeDeposit(int dep)
 {
 	_displayTimestamp();
-	std::cout << "index:" << _accountIndex << ";p_amount:" << _amount; << ";deposit:" << deposit;
-	std::cout << ";amount:" << _amount << ";nb_deposits:" << _nbDeposits << std::endl;
+	std::cout << "index:" << _accountIndex << ";p_amount:" << _amount; << ";deposit:" << dep;
+	_amount += dep;
 	_nbDeposits += 1;
+	std::cout << ";amount:" << _amount << ";nb_deposits:" << _nbDeposits << std::endl;
 	_totalNbDeposits += 1;
-	_amount += deposit;
-	_totalAmount += deposit;
+	_totalAmount += dep;
 }
 
 void	Account::_displayTimestamp(void)
