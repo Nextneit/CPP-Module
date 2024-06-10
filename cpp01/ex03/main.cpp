@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 17:14:55 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/06/10 17:23:47 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/06/10 17:29:44 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,5 @@ int	main()
 		club.setType("some other type of club");
 		ronaldo.attack();
 	}
-	return 0;
+	return (0);
 }
