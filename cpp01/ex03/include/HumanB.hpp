@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 17:13:44 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/06/10 17:53:26 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/06/11 12:21:39 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,15 @@
 # include <iostream>
 # include "Weapon.hpp"
 
-class	humanB
+class	HumanB
 {
 	private:
 		std::string	name;
-		Weapon		weapon;
+		Weapon		*weapon;
 	public:
+		HumanB(std::string name);
 		void		attack();
-		HumanB();
+		void		setWeapon(Weapon &weapon);
 };
 
 #endif

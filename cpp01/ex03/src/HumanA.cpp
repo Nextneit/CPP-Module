@@ -6,14 +6,19 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 17:15:02 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/06/10 17:56:37 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/06/11 12:22:06 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include ".././include/Weapon.hpp"
 #include ".././include/HumanA.hpp"
 
-HumanA::humanA(std::string name, Weapon weapon)
+HumanA::HumanA(std::string name, Weapon &w)
 {
 	this->name = name;
+	this->weapon = &w;
+}
+
+void	HumanA::attack()
+{
+	std::cout << this->name << " attacks with their " << this->weapon->getType() << std::endl;
 }
