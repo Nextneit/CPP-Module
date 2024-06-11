@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 15:10:14 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/06/07 15:15:47 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/06/11 14:46:04 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <iostream>
 # include <iomanip>
 # include <cstdlib>
+
 class Contact{
 	
 	private:

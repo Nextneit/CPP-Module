@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/03 17:15:48 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/06/06 15:55:38 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/06/11 14:45:16 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,5 @@ class Phonebook{
         void    search_contact();
         void    reorder();
 };
+
 #endif
