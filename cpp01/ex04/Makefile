@@ -7,6 +7,7 @@ FLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -rf
 
 SRCS = main.cpp\
+		./src/Replace.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
