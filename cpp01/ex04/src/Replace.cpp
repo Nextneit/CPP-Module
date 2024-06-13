@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 14:08:04 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/06/12 16:19:59 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/06/13 11:36:07 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,16 @@ int	Replace::replace(std::string filename, std::string s1, std::string s2)
 {
 	std::ifstream	inputFile(filename.c_str());
 	std::string		newFile = filename + ".replace";
-	std::offstream	outputFile(newFile.c_str());
+	std::ofstream	outputFile(newFile.c_str());
 	std::string		line;
 	size_t			ptr;
 	
-	if (!inputFile.open())
+	if (!inputFile.is_open())
 	{
 		std::cout << "Can't open file\n";
 		return (1);
 	}
-	if (!outputFile.open())
+	if (!outputFile.is_open())
 	{
 		std::cout << "Can't create output file\n";
 		return (1); 
