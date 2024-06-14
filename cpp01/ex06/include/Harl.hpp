@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 17:41:06 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/06/14 12:13:37 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/06/14 13:25:35 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ class	Harl
 	public:
 		Harl();
 		void	Complain(std::string level);
+		void	filter(std::string level);
 };
 
 #endif
