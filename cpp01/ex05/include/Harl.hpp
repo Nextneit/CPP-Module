@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 17:41:06 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/06/12 17:43:49 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/06/14 12:13:37 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,14 @@
 class	Harl
 {
 	private:
-		void	debug(void);
-		void	info(void);
-		void	warning(void);
-		void	error(void);
+		void		debug(void);
+		void		info(void);
+		void		warning(void);
+		void		error(void);
+		std::string	level[4];
+		void		(Harl::*functions[4])(void);
 	public:
+		Harl();
 		void	Complain(std::string level);
 };
 
