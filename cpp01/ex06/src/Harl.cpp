@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 17:40:41 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/06/18 12:51:53 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/06/18 13:55:02 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,20 +44,6 @@ void	Harl::error(void)
 	std::cout << "[ ERROR ]" << std::endl << "This is unacceptable! I want to speak to the manager now." << std::endl;
 }
 
-void	Harl::Complain(int level)
-{
-	int	i;
-
-	i = 0;
-	while (i < 4)
-	{
-		if (i >= level)
-			(this->*functions[i])();
-		i++;
-	}
-	return ;
-}
-
 void	Harl::filter(std::string level)
 {
 	int	i;
@@ -67,20 +53,20 @@ void	Harl::filter(std::string level)
 	{
 		if (i == 4)
 			break ;
-		if (level[i] == level)
+		if (this->level[i] == level)
 			break ;
 		i++;
 	}
 	switch(i)
 	{
 		case 0:
-			Harl::Complain(i);
+			Harl::debug();
 		case 1:
-			Harl::Complain(i);
+			Harl::info();
 		case 2:
-			Harl::Complain(i);
+			Harl::warning();
 		case 3:
-			Harl::Complain(i);
+			Harl::error();
 		default:
 			std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
 	}

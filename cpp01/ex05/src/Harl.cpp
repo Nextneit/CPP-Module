@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 17:40:41 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/06/14 13:23:15 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/06/18 13:55:17 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	Harl::Complain(std::string level)
 	i = 0;
 	while (i < 4)
 	{
-		if (level[i] == level)
+		if (this->level[i] == level)
 		{
 			(this->*functions[i])();
 			return ;
