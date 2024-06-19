@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 17:20:15 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/06/18 17:24:58 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/06/19 18:20:24 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,18 @@ Fixed::Fixed()
 {
 	std::cout << "Default constructor called" << std::endl;
 	this->value = 0;
+}
+
+Fixed::Fixed(const int nbr)
+{
+	std::cout << "Int constructor called" << std::endl;
+	this->value = nbr << this->fract;
+}
+
+Fixed::Fixed(const float nbr)
+{
+	std::cout << "Float constructor called" << std::endl;
+	this->value = roundf(nbr * (1 << this->fract));
 }
 
 Fixed::Fixed(const Fixed& original)
@@ -47,4 +59,19 @@ void	Fixed::setRawBits(int const raw)
 {
 	this->value = raw;
 	std::cout << "setRawBits member function called" << std::endl;
+}
+
+int	Fixed::toInt(void) const
+{
+	return (this->value >> this->fract);
+}
+
+float	Fixed::toFloat(void) const
+{
+	return (static_cast<float>(this->value) / (1 << this->fract));
+}
+
+std::ostream& operator << (std::ostream& out, const Fixed& nbr)
+{
+	return (out << nbr.toFloat());
 }
