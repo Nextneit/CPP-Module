@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 17:20:15 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/06/19 18:49:41 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/06/20 13:52:08 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,42 +118,50 @@ bool	Fixed::operator != (const Fixed& other)
 	return (false)
 }
 
-Fixed	Fixed::operator + (const Fixed& nbr, const Fixed& nbr2)
+Fixed	Fixed::operator + (const Fixed& nbr)
 {
-	return ();
+	return (Fixed(this->toFloat() + nbr.toFloat()));
 }
 
-Fixed	Fixed::operator - (const Fixed& nbr, const Fixed& nbr2)
+Fixed	Fixed::operator - (const Fixed& nbr)
 {
-	return ();
+	return (Fixed(this->toFloat() - nbr.toFloat()));
 }
 
-Fixed	Fixed::operator * (const Fixed& nbr, const Fixed& nbr2)
+Fixed	Fixed::operator * (const Fixed& nbr)
 {
-	return ();
+	return (Fixed(this->toFloat() * nbr.toFloat()));
 }
 
-Fixed	Fixed::operator / (const Fixed& nbr, const Fixed& nbr2)
+Fixed	Fixed::operator / (const Fixed& nbr)
 {
-	return ();
+	return (Fixed(this->toFloat() / nbr.toFloat()));
 }
 
 Fixed&	Fixed::operator ++ (void)
 {
-
+	this->value++;
+	return (*this);
 }
 
 Fixed&	Fixed::operator -- (void)
 {
-
+	this->value--;
+	return (*this);
 }
 
 Fixed	Fixed::operator ++ (int)
 {
+	Fixed	new(*this);
 
+	this->value++;
+	return (*this);
 }
 
 Fixed	Fixed::operator -- (int)
 {
+	Fixed	new(*this);
 
+	this->value--;
+	return (*this);
 }

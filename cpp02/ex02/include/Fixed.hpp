@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 17:23:09 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/06/19 18:41:15 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/06/20 13:17:08 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,10 @@ class	Fixed
 		bool	operator <= (const Fixed& other);
 		bool	operator == (const Fixed& other);
 		bool	operator != (const Fixed& other);
-		Fixed	operator + (const Fixed& nbr, const Fixed& nbr2);
-		Fixed	operator - (const Fixed& nbr, const Fixed& nbr2);
-		Fixed	operator * (const Fixed& nbr, const Fixed& nbr2);
-		Fixed	operator / (const Fixed& nbr, const Fixed& nbr2);
+		Fixed	operator + (const Fixed& nbr);
+		Fixed	operator - (const Fixed& nbr);
+		Fixed	operator * (const Fixed& nbr);
+		Fixed	operator / (const Fixed& nbr);
 		Fixed&	operator ++ (void);
 		Fixed&	operator -- (void);
 		Fixed	operator ++ (int);
