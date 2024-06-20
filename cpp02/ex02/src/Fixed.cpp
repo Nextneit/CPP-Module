@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 17:20:15 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/06/20 13:52:08 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/06/20 15:11:52 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,42 +80,42 @@ bool	Fixed::operator > (const Fixed& other)
 {
 	if (other.value > this->value)
 		return (true);
-	return (false)
+	return (false);
 }
 
 bool	Fixed::operator < (const Fixed& other)
 {
 	if (other.value < this->value)
 		return (true);
-	return (false)
+	return (false);
 }
 
 bool	Fixed::operator >= (const Fixed& other)
 {
 	if (other.value >= this->value)
 		return (true);
-	return (false)
+	return (false);
 }
 
 bool	Fixed::operator <= (const Fixed& other)
 {
 	if (other.value <= this->value)
 		return (true);
-	return (false)
+	return (false);
 }
 
 bool	Fixed::operator == (const Fixed& other)
 {
 	if (this->value == other.value)
 		return (true);
-	return (false)
+	return (false);
 }
 
 bool	Fixed::operator != (const Fixed& other)
 {
 	if (other.value != this->value)
 		return (true);
-	return (false)
+	return (false);
 }
 
 Fixed	Fixed::operator + (const Fixed& nbr)
@@ -152,7 +152,7 @@ Fixed&	Fixed::operator -- (void)
 
 Fixed	Fixed::operator ++ (int)
 {
-	Fixed	new(*this);
+	Fixed	nbr(*this);
 
 	this->value++;
 	return (*this);
@@ -160,8 +160,36 @@ Fixed	Fixed::operator ++ (int)
 
 Fixed	Fixed::operator -- (int)
 {
-	Fixed	new(*this);
+	Fixed	nbr(*this);
 
 	this->value--;
 	return (*this);
+}
+
+Fixed&	Fixed::min(Fixed& first, Fixed& second)
+{
+	if (first.getRawBits() < second.getRawBits())
+		return (first);
+	return (second);
+}
+
+Fixed&	Fixed::max(Fixed& first, Fixed& second)
+{
+	if (first.getRawBits() > second.getRawBits())
+		return (first);
+	return (second);
+}
+
+const Fixed&	Fixed::min(const Fixed& first, const Fixed& second)
+{
+	if (first.getRawBits() < second.getRawBits())
+		return (first);
+	return (second);
+}
+
+const Fixed&	Fixed::max(const Fixed& first, const Fixed& second)
+{
+	if (first.getRawBits() > second.getRawBits())
+		return (first);
+	return (second);
 }

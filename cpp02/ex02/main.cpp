@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 17:20:17 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/06/19 18:22:52 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/06/20 15:15:34 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,9 @@ int	main(void)
 	std::cout << a << std::endl;
 	std::cout << a++ << std::endl;
 	std::cout << a << std::endl;
+
 	std::cout << b << std::endl;
+
 	std::cout << Fixed::max( a, b ) << std::endl;
 	return 0;
 }
