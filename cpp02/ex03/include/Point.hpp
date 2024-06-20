@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 15:17:43 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/06/20 16:03:27 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/06/20 17:15:22 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,10 @@ class	Point
 	public:
 		Point();
 		Point(const float nbr, const float nbr2);
+		Point(const Point& other);
+		Point(Fixed	const x, Fixed const y);
 		~Point();
-		Point&	operator = (const Point& other)
+		Point&	operator = (const Point& other);
 		Fixed	getX(void) const;
 		Fixed	getY(void) const;
 };

@@ -6,11 +6,11 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 15:43:21 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/06/20 16:32:35 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/06/20 17:19:26 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Point.hpp"
+#include "./include/Point.hpp"
 
 int	main(void)
 {
