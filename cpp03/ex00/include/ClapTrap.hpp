@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 17:21:55 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/06/21 12:57:16 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/06/21 13:09:03 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ class	ClapTrap
 		std::string	name;
 		int			Hp;
 		int			Ep;
-		int			Ad
+		int			Ad;
 	public:
-		ClapTrap();
+		ClapTrap(std::string name);
 		ClapTrap(const ClapTrap& original);
 		ClapTrap&	operator = (const ClapTrap& other);
 		~ClapTrap();

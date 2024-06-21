@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 17:21:58 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/06/21 13:01:38 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/06/21 13:10:50 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ ClapTrap::ClapTrap(std::string name)
 	this->Hp = 10;
 	this->Ep = 10;
 	this->Ad = 0;
+	std::cout << "Claptrap named " << this->name << " has been created." << std::endl;
 }
 ClapTrap::ClapTrap(const ClapTrap& original)
 {
@@ -31,19 +32,20 @@ ClapTrap&	ClapTrap::operator = (const ClapTrap& other)
 {
 	if (this != &other)
 	{
-		this->name = original.name;
-		this->Hp = original.Hp;
-		this->Ep = original.Ep;
-		this->Ad = original.Ad;
+		this->name = other.name;
+		this->Hp = other.Hp;
+		this->Ep = other.Ep;
+		this->Ad = other.Ad;
 	}
 	return (*this);
 }
 
 ClapTrap::~ClapTrap()
 {
+	std::cout << "ClapTrap named " << this->name << " has been destroyed." << std::endl;
 }
 
-void	attack(const std::string& target)
+void	ClapTrap::attack(const std::string& target)
 {
 	std::cout << "ClapTrap " << this->name;
 	std::cout << " attacks " << target;
