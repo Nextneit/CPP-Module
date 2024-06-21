@@ -6,11 +6,18 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 17:21:58 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/06/21 13:10:50 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/06/21 13:32:30 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ClapTrap.hpp"
+
+ClapTrap::ClapTrap()
+{
+	this->Hp = 0;
+	this->Ep = 0;
+	this->Ad = 0;
+}
 
 ClapTrap::ClapTrap(std::string name)
 {
@@ -49,7 +56,7 @@ void	ClapTrap::attack(const std::string& target)
 {
 	std::cout << "ClapTrap " << this->name;
 	std::cout << " attacks " << target;
-	std::cout << " causing " << this->Ad << "points of damage!" << std::endl;
+	std::cout << " causing " << this->Ad << " points of damage!" << std::endl;
 }
 
 void	ClapTrap::takeDamage(unsigned int amount)

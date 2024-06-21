@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 17:22:01 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/06/21 13:11:01 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/06/21 13:32:12 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 int	main(void)
 {
-	ClapTrap	protagonist("elden lord");
+	ClapTrap	protagonist("tarnished");
+
+	protagonist.attack("Maliketh");
 }
