@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 15:57:48 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/06/10 14:58:45 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/06/25 16:35:34 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ void	Account::displayAccountsInfos()
 bool	Account::makeWithdrawal(int wd)
 {
 	_displayTimestamp();
-	std::cout << "index:" << _accountIndex << ";p_amount:" << _amount << ";withdrawal";
+	std::cout << "index:" << _accountIndex << ";p_amount:" << _amount << ";withdrawal:";
 	if (wd > _amount)
 	{
 		std::cout << "refused" << std::endl;
@@ -81,7 +81,7 @@ bool	Account::makeWithdrawal(int wd)
 	}
 	_amount -= wd;
 	_nbWithdrawals += 1;
-	std::cout << ";amount:" << _amount << ";nb_withdrawals:" << _nbWithdrawals << std::endl;
+	std::cout << wd << ";amount:" << _amount << ";nb_withdrawals:" << _nbWithdrawals << std::endl;
 	_totalNbWithdrawals += 1;
 	_totalAmount -= wd;
 	return true;
