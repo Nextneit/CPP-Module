@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 17:20:15 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/06/20 17:18:43 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/06/25 13:38:00 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -145,7 +145,7 @@ Fixed	Fixed::operator ++ (int)
 	Fixed	nbr(*this);
 
 	this->value++;
-	return (*this);
+	return (nbr);
 }
 
 Fixed	Fixed::operator -- (int)
@@ -153,7 +153,7 @@ Fixed	Fixed::operator -- (int)
 	Fixed	nbr(*this);
 
 	this->value--;
-	return (*this);
+	return (nbr);
 }
 
 Fixed&	Fixed::min(Fixed& first, Fixed& second)
