@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 16:27:31 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/06/13 11:34:48 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/06/26 17:15:31 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	main(int argc, char **argv)
 	}
 	else
 	{
-		std::cout << "Incorrect number of arguments\n";
+		std::cout << "Error: incorrect number of arguments\n";
 		return (1);
 	}
 	return (0);
