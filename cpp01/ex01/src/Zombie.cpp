@@ -6,11 +6,11 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 16:16:45 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/06/10 16:36:23 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/06/26 15:41:16 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Zombie.hpp"
+#include ".././include/Zombie.hpp"
 
 Zombie::Zombie(std::string name)
 {

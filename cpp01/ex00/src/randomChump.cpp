@@ -6,11 +6,11 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 15:45:53 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/06/10 16:11:50 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/06/26 15:41:55 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Zombie.hpp"
+#include ".././include/Zombie.hpp"
 
 void	randomChump(std::string name)
 {

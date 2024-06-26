@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 17:40:41 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/06/18 13:55:02 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/06/26 13:10:00 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,10 @@ void	Harl::filter(std::string level)
 		case 2:
 			Harl::warning();
 		case 3:
+		{
 			Harl::error();
+			break ;
+		}
 		default:
 			std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
 	}

@@ -6,11 +6,11 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 16:14:24 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/06/10 16:35:29 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/06/26 15:41:21 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Zombie.hpp"
+#include ".././include/Zombie.hpp"
 
 Zombie*	zombieHorde(int N, std::string name)
 {
