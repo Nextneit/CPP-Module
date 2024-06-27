@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 17:21:58 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/06/27 16:19:45 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/06/27 18:33:00 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ ClapTrap::ClapTrap()
 	std::cout << "Default constructor called." << std::endl;
 	this->name = "default";
 	this->Hp = 0;
-	std::cout << "Claptrap: default "<< " initial Hp = " << this->Hp << std::endl;
+	std::cout << "ClapTrap: default "<< " initial Hp = " << this->Hp << std::endl;
 	this->Ep = 0;
-	std::cout << "Claptrap: default "<< " initial Ep = " << this->Ep << std::endl;
+	std::cout << "ClapTrap: default "<< " initial Ep = " << this->Ep << std::endl;
 	this->Ad = 0;
-	std::cout << "Claptrap: default "<< " initial Ad = " << this->Ad << std::endl;
+	std::cout << "ClapTrap: default "<< " initial Ad = " << this->Ad << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name)
@@ -29,22 +29,23 @@ ClapTrap::ClapTrap(std::string name)
 	std::cout << "Name constructor called" << std::endl;
 	this->name = name;
 	this->Hp = 10;
-	std::cout << "Claptrap: " << this->name << " initial Hp = " << this->Hp << std::endl;
+	std::cout << "ClapTrap: " << this->name << " initial Hp = " << this->Hp << std::endl;
 	this->Ep = 10;
-	std::cout << "Claptrap: " << this->name << " initial Ep = " << this->Ep << std::endl;
+	std::cout << "ClapTrap: " << this->name << " initial Ep = " << this->Ep << std::endl;
 	this->Ad = 0;
-	std::cout << "Claptrap: " << this->name << " initial Ad = " << this->Ad << std::endl;
+	std::cout << "ClapTrap: " << this->name << " initial Ad = " << this->Ad << std::endl;
 }
+
 ClapTrap::ClapTrap(const ClapTrap& original)
 {
 	std::cout << "Copy constructor has been called." << std::endl;
 	this->name = original.name;
 	this->Hp = original.Hp;
-	std::cout << "Claptrap copy: " << this->name << " initial Hp = " << this->Hp << std::endl;
+	std::cout << "ClapTrap copy: " << this->name << " initial Hp = " << this->Hp << std::endl;
 	this->Ep = original.Ep;
-	std::cout << "Claptrap copy: " << this->name << " initial Ep = " << this->Ep << std::endl;
+	std::cout << "ClapTrap copy: " << this->name << " initial Ep = " << this->Ep << std::endl;
 	this->Ad = original.Ad;
-	std::cout << "Claptrap copy: " << this->name << " initial Ad = " << this->Ad << std::endl;
+	std::cout << "ClapTrap copy: " << this->name << " initial Ad = " << this->Ad << std::endl;
 }
 
 ClapTrap&	ClapTrap::operator = (const ClapTrap& other)
