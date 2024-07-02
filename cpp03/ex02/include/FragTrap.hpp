@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 16:23:39 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/02 16:27:39 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/02 18:19:42 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,15 @@
 
 #include "ClapTrap.hpp"
 
-class	FragTrap
+class	FragTrap: public ClapTrap
 {
 	public:
+		FragTrap();
+		FragTrap(std::string name);
+		FragTrap(const FragTrap& copy);
+		FragTrap& operator = (const FragTrap& src);
+		~FragTrap();
+		void	highFivesGuys(void);
+};
 
-	private:
-	
-}
+#endif
