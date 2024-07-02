@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 16:23:49 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/02 18:39:19 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/02 18:42:39 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ FragTrap::FragTrap(): ClapTrap()
 FragTrap::FragTrap(std::string name): ClapTrap(name)
 {
 	std::cout << "Name constructor called." << std::endl;
-	this->name = "default";
+	this->name = name;
 	this->Hp = 100;
 	std::cout << "FragTrap: "<< this->name << " initial Hp = " << this->Hp << std::endl;
 	this->Ep = 100;
@@ -50,7 +50,7 @@ FragTrap&	FragTrap::operator = (const FragTrap& other)
 
 FragTrap::~FragTrap()
 {
-	std::cout << "FragTrap named " << this->name << " destructor called." << std::endl;
+	std::cout << "FragTrap named: " << this->name << " destructor called." << std::endl;
 }
 
 void	FragTrap::highFivesGuys(void)
