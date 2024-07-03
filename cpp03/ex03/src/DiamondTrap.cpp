@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 18:45:09 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/03 17:21:34 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/03 17:26:44 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,4 +70,9 @@ DiamondTrap::~DiamondTrap()
 void	DiamondTrap::whoAmI()
 {
 	std::cout << "DiamondTrap name is " << this->_name << " and ClapTrap name is " << ClapTrap::name + "_clap_name" << std::endl;
+}
+
+void	DiamondTrap::attack(std::string target)
+{
+	ScavTrap::attack(target);
 }
