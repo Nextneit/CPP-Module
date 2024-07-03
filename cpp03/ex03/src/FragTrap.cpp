@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 16:23:49 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/03 16:48:37 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/03 17:15:46 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ FragTrap::FragTrap(std::string name): ClapTrap(name)
 	std::cout << "FragTrap: "<< this->name << " initial Ad = " << this->Ad << std::endl;
 }
 
-FragTrap::FragTrap(const ScavTrap& original)
+FragTrap::FragTrap(const FragTrap& original)
 {
 	std::cout << "Copy constructor has been called." << std::endl;
 	this->name = original.name;

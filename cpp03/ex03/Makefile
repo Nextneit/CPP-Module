@@ -1,4 +1,4 @@
-NAME = FragTrap
+NAME = DiamondTrap
 
 CC = c++
 
@@ -10,6 +10,7 @@ SRCS = main.cpp\
 		./src/ClapTrap.cpp\
 		./src/ScavTrap.cpp\
 		./src/FragTrap.cpp\
+		./src/DiamondTrap.cpp\
 
 OBJS = $(SRCS:.cpp=.o)
 

@@ -6,13 +6,13 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 18:45:09 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/03 16:52:13 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/03 17:21:34 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap(): FragTrap(), ScavTrap()
+DiamondTrap::DiamondTrap(): ScavTrap(), FragTrap() 
 {
 	std::cout << "Default constructor called." << std::endl;
 	this->_name = "Default";
@@ -25,15 +25,15 @@ DiamondTrap::DiamondTrap(): FragTrap(), ScavTrap()
 }
 
 
-DiamondTrap::DiamondTrap(std::string name): FragTrap(name), ScavTrap(name)
+DiamondTrap::DiamondTrap(std::string name): ScavTrap(name), FragTrap(name)
 {
-	std::cout << "Default constructor called." << std::endl;
+	std::cout << "Name constructor called." << std::endl;
 	this->_name = name;
-	this->Hp = FragTrap.Hp;
+	this->Hp = FragTrap::Hp;
 	std::cout << "DiamondTrap named : " << this->_name << " initial Hp = " << this->Hp << std::endl;
-	this->Ep = ScavTrap.Hp;
+	this->Ep = ScavTrap::Ep;
 	std::cout << "DiamondTrap named : " << this->_name << " initial Ep = " << this->Ep << std::endl;
-	this->Ad = FragTrap.Ad;
+	this->Ad = FragTrap::Ad;
 	std::cout << "DiamondTrap named : " << this->_name << " initial Ad = " << this->Ad << std::endl;
 }
 
@@ -69,5 +69,5 @@ DiamondTrap::~DiamondTrap()
 
 void	DiamondTrap::whoAmI()
 {
-	std::cout << "DiamondTrap name is " << this->_name << " and ClapTrap name is " << ClapTrap::name + "_clap_name" << std::end;
+	std::cout << "DiamondTrap name is " << this->_name << " and ClapTrap name is " << ClapTrap::name + "_clap_name" << std::endl;
 }
