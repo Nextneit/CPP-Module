@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 16:23:39 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/02 18:19:42 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/03 16:54:08 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include "ClapTrap.hpp"
 
-class	FragTrap: public ClapTrap
+class	FragTrap: virtual public ClapTrap
 {
 	public:
 		FragTrap();

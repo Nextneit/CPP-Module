@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/27 16:32:39 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/03 16:39:00 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/03 16:48:48 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ ScavTrap::ScavTrap(const ScavTrap& original)
 
 ScavTrap&	ScavTrap::operator = (const ScavTrap& other)
 {
+	std::cout << "ScavTrap: Copy assignment operator called" << std::endl;
 	if (this != &other)
 	{
 		this->name = other.name;
