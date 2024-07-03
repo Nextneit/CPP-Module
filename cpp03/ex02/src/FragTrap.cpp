@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 16:23:49 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/03 16:39:25 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/03 16:49:25 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,21 @@ FragTrap::FragTrap(std::string name): ClapTrap(name)
 	std::cout << "FragTrap: "<< this->name << " initial Ad = " << this->Ad << std::endl;
 }
 
+FragTrap::FragTrap(const ScavTrap& original)
+{
+	std::cout << "Copy constructor has been called." << std::endl;
+	this->name = original.name;
+	this->Hp = original.Hp;
+	std::cout << "FragTrap copy: " << this->name << " initial Hp = " << this->Hp << std::endl;
+	this->Ep = original.Ep;
+	std::cout << "FragTrap copy: " << this->name << " initial Ep = " << this->Ep << std::endl;
+	this->Ad = original.Ad;
+	std::cout << "FragTrap copy: " << this->name << " initial Ad = " << this->Ad << std::endl;
+}
+
 FragTrap&	FragTrap::operator = (const FragTrap& other)
 {
+	std::cout << "FragTrap: Copy assignment operator called" << std::endl;
 	if (this != &other)
 	{
 		this->name = other.name;
