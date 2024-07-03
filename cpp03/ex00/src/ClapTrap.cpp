@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 17:21:58 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/06/27 16:19:45 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/03 16:40:11 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 ClapTrap::ClapTrap()
 {
 	std::cout << "Default constructor called." << std::endl;
-	this->name = "default";
+	this->name = "Default";
 	this->Hp = 0;
-	std::cout << "Claptrap: default "<< " initial Hp = " << this->Hp << std::endl;
+	std::cout << "Claptrap: Default "<< " initial Hp = " << this->Hp << std::endl;
 	this->Ep = 0;
-	std::cout << "Claptrap: default "<< " initial Ep = " << this->Ep << std::endl;
+	std::cout << "Claptrap: Default "<< " initial Ep = " << this->Ep << std::endl;
 	this->Ad = 0;
-	std::cout << "Claptrap: default "<< " initial Ad = " << this->Ad << std::endl;
+	std::cout << "Claptrap: Default "<< " initial Ad = " << this->Ad << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name)
