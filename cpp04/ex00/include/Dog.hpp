@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 17:15:57 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/04 17:42:56 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/04 18:17:00 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include "Animal.hpp"
 
-class	Dog
+class	Dog : public Animal
 {
 	public:
 		Dog();

@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 17:17:48 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/04 17:52:22 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/04 18:21:59 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Dog::Dog() : Animal("Dog")
 {
-	std::cout << type << " constructor has been called." << std::endl
+	std::cout << type << " constructor has been called." << std::endl;
 }
 
 Dog::~Dog()
@@ -24,7 +24,7 @@ Dog::~Dog()
 
 Dog::Dog(const Dog& original) : Animal(original)
 {
-	std::cout << "Dog copy constructor has been called." << std::endl
+	std::cout << "Dog copy constructor has been called." << std::endl;
 }
 
 Dog&	Dog::operator = (const Dog& other)
@@ -33,4 +33,9 @@ Dog&	Dog::operator = (const Dog& other)
 	if (this != &other)
 		Animal::operator = (other);
 	return (*this);	
+}
+
+void	Dog::makeSound() const
+{
+	std::cout << "Woof!" << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 17:07:59 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/04 17:56:02 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/04 18:21:13 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,14 @@ Animal::Animal()
 	this->type = "Default";
 }
 
+Animal::Animal(std::string type) : type(type)
+{
+	std::cout << "Animal " << type << " constructor called." << std::endl;
+}
+
 Animal::~Animal()
 {
-	std::cout << "Animal destructor has been called." << std::endl
+	std::cout << "Animal destructor has been called." << std::endl;
 }
 
 Animal::Animal(const Animal& original)
@@ -33,6 +38,6 @@ Animal&	Animal::operator = (const Animal& other)
 {
 	std::cout << "Animal copy operator has been called." << std::endl;
 	if (this != &other)
-		this->type = original.type;
+		this->type = other.type;
 	return (*this);
 }

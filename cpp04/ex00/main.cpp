@@ -6,11 +6,13 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 17:18:29 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/04 17:22:27 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/04 18:18:40 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./include/Animal.hpp"
+#include "./include/Dog.hpp"
+#include "./include/Cat.hpp"
 
 int main()
 {
@@ -22,6 +24,5 @@ int main()
 	i->makeSound(); //will output the cat sound!
 	j->makeSound();
 	meta->makeSound();
-	...
 	return (0);
 }

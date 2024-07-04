@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 17:17:10 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/04 17:24:26 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/04 18:18:08 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,14 @@
 
 # include "Animal.hpp"
 
-class	Cat
+class	Cat : public Animal
 {
 	public:
 		Cat();
 		~Cat();
 		Cat(const Cat& original);
 		Cat&	operator = (const Cat& other);
-		void	makeSound();
+		void	makeSound() const;
 };
 
 #endif
