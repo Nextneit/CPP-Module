@@ -1,4 +1,4 @@
-NAME = DiamondTrap
+NAME = Animal
 
 CC = c++
 
@@ -7,10 +7,9 @@ FLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -rf
 
 SRCS = main.cpp\
-		./src/ClapTrap.cpp\
-		./src/ScavTrap.cpp\
-		./src/FragTrap.cpp\
-		./src/DiamondTrap.cpp\
+		./src/Animal.cpp\
+		./src/Dog.cpp\
+		./src/Cat.cpp\
 
 OBJS = $(SRCS:.cpp=.o)
 

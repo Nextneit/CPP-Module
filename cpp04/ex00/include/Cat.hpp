@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 17:17:10 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/04 17:17:34 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/04 17:24:26 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,12 @@
 
 class	Cat
 {
-
+	public:
+		Cat();
+		~Cat();
+		Cat(const Cat& original);
+		Cat&	operator = (const Cat& other);
+		void	makeSound();
 };
 
 #endif
