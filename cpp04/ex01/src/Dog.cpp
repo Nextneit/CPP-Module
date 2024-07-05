@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 17:17:48 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/05 14:02:36 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/05 14:05:16 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,9 @@ Dog::~Dog()
 	delete this->brain;
 }
 
-Dog::Dog(const Dog& original) : Animal(original)
+Dog::Dog(const Dog& original) : Animal(original), brain(new Brain(*original.brain))
 {
 	std::cout << "Dog copy constructor has been called." << std::endl;
-	this->brain.Brain(original.brain);
 }
 
 Dog&	Dog::operator = (const Dog& other)
