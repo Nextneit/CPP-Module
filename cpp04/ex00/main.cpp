@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 17:18:29 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/04 18:18:40 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/05 13:00:13 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,8 @@ int main()
 	i->makeSound(); //will output the cat sound!
 	j->makeSound();
 	meta->makeSound();
+	delete meta;
+	delete j;
+	delete i;
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 17:07:42 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/05 12:49:09 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/05 13:00:29 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ class	Animal
 	public:
 		Animal();
 		Animal(std::string type);
-		~Animal();
+		virtual ~Animal();
 		Animal(const Animal& original);
 		Animal&	operator = (const Animal& other);
 		std::string	getType() const;
-		void	makeSound() const;
+		virtual void	makeSound() const;
 };
 
 #endif
