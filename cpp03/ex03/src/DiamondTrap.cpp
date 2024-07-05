@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 18:45:09 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/03 17:26:44 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/05 12:43:53 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ DiamondTrap::DiamondTrap(): ScavTrap(), FragTrap()
 	this->_name = "Default";
 	this->Hp = FragTrap::Hp;
 	std::cout << "DiamondTrap: Default "<< " initial Hp = " << this->Hp << std::endl;
-	this->Ep = ScavTrap::Ep;
+	this->Ep = 50;
 	std::cout << "DiamondTrap: Default "<< " initial Ep = " << this->Ep << std::endl;
 	this->Ad = FragTrap::Ad;
 	std::cout << "DiamondTrap: Default "<< " initial Ad = " << this->Ad << std::endl;
@@ -31,7 +31,7 @@ DiamondTrap::DiamondTrap(std::string name): ScavTrap(name), FragTrap(name)
 	this->_name = name;
 	this->Hp = FragTrap::Hp;
 	std::cout << "DiamondTrap named : " << this->_name << " initial Hp = " << this->Hp << std::endl;
-	this->Ep = ScavTrap::Ep;
+	this->Ep = 50;
 	std::cout << "DiamondTrap named : " << this->_name << " initial Ep = " << this->Ep << std::endl;
 	this->Ad = FragTrap::Ad;
 	std::cout << "DiamondTrap named : " << this->_name << " initial Ad = " << this->Ad << std::endl;
