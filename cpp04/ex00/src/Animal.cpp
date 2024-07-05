@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 17:07:59 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/04 18:21:13 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/05 12:53:23 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,14 @@ Animal&	Animal::operator = (const Animal& other)
 	if (this != &other)
 		this->type = other.type;
 	return (*this);
+}
+
+std::string	Animal::getType() const
+{
+	return (type);
+}
+
+void	Animal::makeSound() const
+{
+	std::cout << "Animal sound." << std::endl;
 }
