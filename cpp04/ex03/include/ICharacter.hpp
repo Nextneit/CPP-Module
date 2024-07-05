@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 15:10:47 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/05 15:14:13 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/05 17:10:22 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@
 
 class	ICharacter
 {
+	private:
+		std::string	name;
+		AMateria*	inventory[4];
 	public:
 		virtual -ICharacter(){}
 		virtual std::string const & getName() const = 0;
