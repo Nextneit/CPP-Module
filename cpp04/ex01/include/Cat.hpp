@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 17:17:10 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/04 18:18:08 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/05 13:29:09 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,12 @@
 # define CAT_HPP
 
 # include "Animal.hpp"
+# include "Brain.hpp"
 
 class	Cat : public Animal
 {
+	private:
+		Brain* brain;
 	public:
 		Cat();
 		~Cat();

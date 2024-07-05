@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 17:17:48 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/04 18:21:59 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/05 13:31:58 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,13 @@
 Dog::Dog() : Animal("Dog")
 {
 	std::cout << type << " constructor has been called." << std::endl;
+	new Brain();
 }
 
 Dog::~Dog()
 {
 	std::cout << "Dog destructor has been called." << std::endl;
+	delete Brain
 }
 
 Dog::Dog(const Dog& original) : Animal(original)

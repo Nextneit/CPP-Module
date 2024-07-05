@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 17:15:57 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/04 18:17:00 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/05 13:29:00 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,12 @@
 # define DOG_HPP
 
 # include "Animal.hpp"
+# include "Brain.hpp"
 
 class	Dog : public Animal
 {
+	private:
+		Brain* brain;
 	public:
 		Dog();
 		~Dog();
