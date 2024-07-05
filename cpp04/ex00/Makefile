@@ -10,6 +10,8 @@ SRCS = main.cpp\
 		./src/Animal.cpp\
 		./src/Dog.cpp\
 		./src/Cat.cpp\
+		./src/WrongAnimal.cpp\
+		./src/WrongCat.cpp\
 
 OBJS = $(SRCS:.cpp=.o)
 
