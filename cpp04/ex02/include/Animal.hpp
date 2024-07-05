@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 17:07:42 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/05 13:00:29 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/05 14:29:15 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class	Animal
 		Animal(const Animal& original);
 		Animal&	operator = (const Animal& other);
 		std::string	getType() const;
-		virtual void	makeSound() const;
+		virtual void	makeSound() const = 0;
 };
 
 #endif
