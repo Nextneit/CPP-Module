@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 17:18:29 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/05 14:12:26 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/05 14:58:06 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,12 @@ int main()
 			animals[i] = new Dog();
 		else
 			animals[i] = new Cat();
+	}
+	int i = 0;
+	while(i < 4)
+	{
+		animals[i]->makeSound();
+		i++;
 	}
 	int j = 0;
 	while (j < 4)
