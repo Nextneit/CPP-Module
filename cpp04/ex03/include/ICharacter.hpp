@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 15:10:47 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/05 17:10:22 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/09 16:43:55 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,14 @@ class	ICharacter
 	private:
 		std::string	name;
 		AMateria*	inventory[4];
+		AMateria*	unequiped[100];
 	public:
-		virtual -ICharacter(){}
+		ICharacter();
+		ICharacter(std::string name);
+		ICharacter(ICharacter &original);
+		ICharacter& operator = (ICharacter &other);
+		-ICharacter(){}
+		AMateria*	getMateria(int index);
 		virtual std::string const & getName() const = 0;
 		virtual void	equip(AMateria* m) = 0;
 		virtual void	unequip(int idx) = 0;

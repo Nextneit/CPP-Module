@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 15:08:09 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/05 17:10:00 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/09 16:51:30 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,13 @@ AMateria::~AMateria()
 
 AMateria& AMateria::AMateria(const &AMateria original)
 {
+	std::cout << "AMateria copy constructor has been called." << std::endl;
 	*this = original;
 }
 
 AMateria&	AMateria::operator = (const AMateria& other)
 {
+	std::cout << "AMateria copy operator has been called." << std::endl;
 	if (this != &other)
 		this->type = other.type;
 	return (*this);
@@ -44,6 +46,11 @@ AMateria&	AMateria::operator = (const AMateria& other)
 std::string	const &AMateria::getType() const
 {
 	return (type);
+}
+
+void	AMateria::setType(std::string type)
+{
+	this->type = type;
 }
 
 void	AMateria::use(ICharacter &target)
