@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 18:45:09 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/05 12:43:53 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/09 11:41:55 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 DiamondTrap::DiamondTrap(): ScavTrap(), FragTrap() 
 {
 	std::cout << "Default constructor called." << std::endl;
-	this->_name = "Default";
+	this->name = "Default";
 	this->Hp = FragTrap::Hp;
 	std::cout << "DiamondTrap: Default "<< " initial Hp = " << this->Hp << std::endl;
 	this->Ep = 50;
@@ -28,13 +28,13 @@ DiamondTrap::DiamondTrap(): ScavTrap(), FragTrap()
 DiamondTrap::DiamondTrap(std::string name): ScavTrap(name), FragTrap(name)
 {
 	std::cout << "Name constructor called." << std::endl;
-	this->_name = name;
+	this->name = name;
 	this->Hp = FragTrap::Hp;
-	std::cout << "DiamondTrap named : " << this->_name << " initial Hp = " << this->Hp << std::endl;
+	std::cout << "DiamondTrap named : " << this->name << " initial Hp = " << this->Hp << std::endl;
 	this->Ep = 50;
-	std::cout << "DiamondTrap named : " << this->_name << " initial Ep = " << this->Ep << std::endl;
+	std::cout << "DiamondTrap named : " << this->name << " initial Ep = " << this->Ep << std::endl;
 	this->Ad = FragTrap::Ad;
-	std::cout << "DiamondTrap named : " << this->_name << " initial Ad = " << this->Ad << std::endl;
+	std::cout << "DiamondTrap named : " << this->name << " initial Ad = " << this->Ad << std::endl;
 }
 
 DiamondTrap::DiamondTrap(const DiamondTrap& original)
@@ -64,12 +64,12 @@ DiamondTrap&	DiamondTrap::operator = (const DiamondTrap& other)
 
 DiamondTrap::~DiamondTrap()
 {
-	std::cout << "DiamondTrap named: " << this->_name << " has been destroyed." << std::endl;
+	std::cout << "DiamondTrap named: " << this->name << " has been destroyed." << std::endl;
 }
 
 void	DiamondTrap::whoAmI()
 {
-	std::cout << "DiamondTrap name is " << this->_name << " and ClapTrap name is " << ClapTrap::name + "_clap_name" << std::endl;
+	std::cout << "DiamondTrap name is " << this->name << " and ClapTrap name is " << ClapTrap::name + "_clap_name." << std::endl;
 }
 
 void	DiamondTrap::attack(std::string target)

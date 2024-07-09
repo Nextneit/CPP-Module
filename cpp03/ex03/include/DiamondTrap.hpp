@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 18:45:38 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/03 17:27:39 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/09 11:41:16 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 class	DiamondTrap: public ScavTrap, public FragTrap
 {
 	private:
-		std::string _name;
+		std::string name;
 	public:
 		DiamondTrap();
 		DiamondTrap(std::string name);

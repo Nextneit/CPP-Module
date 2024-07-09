@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 16:23:49 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/04 12:03:50 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/08 17:30:28 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ FragTrap&	FragTrap::operator = (const FragTrap& other)
 
 FragTrap::~FragTrap()
 {
-	std::cout << "FragTrap named: " << this->name << " destructor called." << std::endl;
+	std::cout << "FragTrap named: " << this->name << " has been destroyed." << std::endl;
 }
 
 void	FragTrap::highFivesGuys(void)
