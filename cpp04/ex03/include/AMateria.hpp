@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 15:06:04 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/09 16:51:10 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/10 13:29:03 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class	AMateria
 		std::string type;
 	public:
 		AMateria();
-		AMateria(const &AMateria original);
+		AMateria(AMateria &original);
 		AMateria& operator = (const &AMateria other);
 		virtual ~AMateria();
 		AMateria(std::string const & type);

@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 12:49:15 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/10 12:54:16 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/10 13:30:35 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ class	MateriaSource: public IMateriaSource
 	private:
 		AMateria*	inventory[4];
 	public:
-		AMateria();
-		~AMateria();
-		AMateria& operator = (AMateria &other);
-		AMateria(AMateria &original);
+		MateriaSource();
+		~MateriaSource();
+		MateriaSource& operator = (MateriaSource &other);
+		MateriaSource(MateriaSource &original);
 		void		learnMateria(AMateria* m);
 		AMateria*	createMateria(std::string const& m);
 }
