@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 15:08:09 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/09 16:51:30 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/10 13:29:12 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ AMateria::~AMateria()
 	std::cout << "AMateria destructor for " << getType() << " has been called." << std::endl;
 }
 
-AMateria& AMateria::AMateria(const &AMateria original)
+AMateria& AMateria::AMateria(AMateria &original)
 {
 	std::cout << "AMateria copy constructor has been called." << std::endl;
 	*this = original;
