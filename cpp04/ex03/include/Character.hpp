@@ -6,12 +6,14 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 12:39:38 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/10 12:44:29 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/10 15:17:32 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CHARACTER_HPP
 # define CHARACTER_HPP
+
+# include <iostream>
 
 class	Character: public ICharacter
 {
