@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 13:02:28 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/10 18:07:43 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/10 19:05:26 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 Cure::Cure()
 {
+	this->type = "cure";
 }
 
 Cure::~Cure()
@@ -32,7 +33,8 @@ Cure&	Cure::operator = (const Cure& other)
 	return (*this)
 }
 
-AMateria	clone()
+AMateria	Cure::clone()
 {
-	
+	AMateria new_cure = new Cure(*this);
+	return (new_cure);
 }

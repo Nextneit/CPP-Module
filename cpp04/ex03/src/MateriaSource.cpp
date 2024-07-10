@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 13:03:48 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/10 16:30:26 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/10 18:56:48 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,13 @@ MateriaSource::MateriaSource()
 
 ~MateriaSource::MateriaSource()
 {
+	int	i = 0;
+
+	while (this->inventory[i])
+	{
+		delete this->inventory[i];
+		i++;
+	}
 }
 
 MateriaSource& MateriaSource::operator = (MateriaSource &other)
@@ -45,7 +52,12 @@ void	MateriaSource::learnMateria(AMateria m*)
 
 	while (this->inventory[i])
 		i++;
-	this->inventory[i] = *m;
+	if (i < 4)
+	{
+		this->inventory[i] = *m;
+		return ;
+	}
+	else if ()
 }
 
 AMateria*	createMateria(std::string const& m)

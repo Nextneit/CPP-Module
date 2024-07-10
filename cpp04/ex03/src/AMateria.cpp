@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 15:08:09 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/10 16:44:20 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/10 19:02:58 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 AMateria::AMateria()
 {
-	std::cout << "Default AMateria constructor has been called." << std::endl;
 	type = "";
+	std::cout << "Default AMateria constructor has been called." << std::endl;
 }
 
 AMateria::AMateria(std::string const &type)
@@ -31,8 +31,8 @@ AMateria::~AMateria()
 
 AMateria& AMateria::AMateria(AMateria &original)
 {
-	std::cout << "AMateria copy constructor has been called." << std::endl;
 	*this = original;
+	std::cout << "AMateria copy constructor has been called." << std::endl;
 }
 
 AMateria&	AMateria::operator = (const AMateria& other)
@@ -60,5 +60,6 @@ void	AMateria::use(ICharacter &target)
 
 AMateria*	AMateria::clone()
 {
-
+	AMateria new_materia = new AMateria(*this);
+	return (new_materia);
 }
