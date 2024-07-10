@@ -1,18 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ICharacter.cpp                                     :+:      :+:    :+:   */
+/*   MateriaSource.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/05 15:55:21 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/10 13:14:57 by ncruz-ga         ###   ########.fr       */
+/*   Created: 2024/07/10 13:03:48 by ncruz-ga          #+#    #+#             */
+/*   Updated: 2024/07/10 13:04:16 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ICharacter.hpp"
+#include "../include/MateriaSource.hpp"
 
-void	ICharacter::equip(AMateria* m)
-{
-	
-}

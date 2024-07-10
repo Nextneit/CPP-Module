@@ -1,18 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ICharacter.cpp                                     :+:      :+:    :+:   */
+/*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/05 15:55:21 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/10 13:14:57 by ncruz-ga         ###   ########.fr       */
+/*   Created: 2024/07/10 13:03:05 by ncruz-ga          #+#    #+#             */
+/*   Updated: 2024/07/10 13:10:14 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ICharacter.hpp"
+#include "../include/Ice.hpp"
 
-void	ICharacter::equip(AMateria* m)
+Ice::Ice()
 {
-	
+}
+
+Ice::~Ice()
+{
+}
+
+Ice&	Ice::Ice(const Ice& original)
+{
+	*this = original;
+}
+
+Ice&	Ice::operator = (const Ice& other)
+{
+	if (this != &other)
+		this = other;
+	return (*this)
 }

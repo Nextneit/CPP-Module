@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ICharacter.cpp                                     :+:      :+:    :+:   */
+/*   Cure.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/05 15:55:21 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/10 13:14:57 by ncruz-ga         ###   ########.fr       */
+/*   Created: 2024/07/10 12:56:23 by ncruz-ga          #+#    #+#             */
+/*   Updated: 2024/07/10 13:01:35 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ICharacter.hpp"
+#ifndef CURE_HPP
+# define CURE_HPP
 
-void	ICharacter::equip(AMateria* m)
+class	Cure
 {
-	
-}
+	public:
+		Cure();
+		~Cure();
+		Cure(Cure &original);
+		Cure& operator = (Cure &other);
+		AMateria*	clone() const;
+};
+
+#endif

@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ICharacter.cpp                                     :+:      :+:    :+:   */
+/*   Ice.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/05 15:55:21 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/10 13:14:57 by ncruz-ga         ###   ########.fr       */
+/*   Created: 2024/07/10 12:55:02 by ncruz-ga          #+#    #+#             */
+/*   Updated: 2024/07/10 13:00:58 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ICharacter.hpp"
+#ifndef ICE_HPP
+# define ICE_HPP
 
-void	ICharacter::equip(AMateria* m)
+class	Ice
 {
-	
-}
+	public:
+		Ice();
+		~Ice();
+		Ice(Ice &original);
+		Ice& operator = (Ice &other);
+		AMateria*	clone() const;
+};
+
+#endif

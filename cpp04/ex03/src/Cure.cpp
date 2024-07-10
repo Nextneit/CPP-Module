@@ -1,18 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ICharacter.cpp                                     :+:      :+:    :+:   */
+/*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/05 15:55:21 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/10 13:14:57 by ncruz-ga         ###   ########.fr       */
+/*   Created: 2024/07/10 13:02:28 by ncruz-ga          #+#    #+#             */
+/*   Updated: 2024/07/10 13:09:34 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ICharacter.hpp"
+#include "../include/Cure.hpp"
 
-void	ICharacter::equip(AMateria* m)
+Cure::Cure()
 {
-	
+}
+
+Cure::~Cure()
+{
+}
+
+Cure&	Cure::Cure(const Cure& original)
+{
+	*this = original;
+}
+
+Cure&	Cure::operator = (const Cure& other)
+{
+	if (this != &other)
+		this = other;
+	return (*this)
 }
