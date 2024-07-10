@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 17:18:29 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/05 14:58:06 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/10 15:32:49 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,10 @@ int main()
 		delete animals[j];
 		j++;
 	}
+	Cat *totus = new Cat();
+	Cat *tosus = new Cat();
+	*tosus = *totus;
+	delete totus;
+	delete tosus;
 	return 0;
 }

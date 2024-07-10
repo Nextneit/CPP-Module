@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 17:17:48 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/05 14:05:16 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/10 15:28:56 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,9 @@ Dog&	Dog::operator = (const Dog& other)
 	if (this != &other)
 	{
 		Animal::operator = (other);
-		this->brain = other.brain;
+		if (this->brain)
+			delete this->brain;
+		this->brain = new Brain(*other.brain);
 	}
 	return (*this);	
 }
