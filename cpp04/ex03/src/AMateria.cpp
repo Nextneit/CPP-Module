@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 15:08:09 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/10 13:29:12 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/10 16:44:20 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,4 +56,9 @@ void	AMateria::setType(std::string type)
 void	AMateria::use(ICharacter &target)
 {
 	std::cout << "AMateria named " << getType() << "has been used on " << target.getName() << std::endl; 
+}
+
+AMateria*	AMateria::clone()
+{
+
 }

@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 15:50:14 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/05 17:10:32 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/10 17:07:53 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class	IMateriaSource
 	public:
 		virtual ~IMateriaSource() {}
 		virtual void		learnMateria(AMateria*) = 0;
-		virtual AMateria*	creatMateria(std::string const & type) = 0;
+		virtual AMateria*	createMateria(std::string const & type) = 0;
 };
 
 #endif
