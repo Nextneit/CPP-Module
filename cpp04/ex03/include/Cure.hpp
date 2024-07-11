@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 12:56:23 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/11 15:30:16 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/11 17:22:08 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,9 @@ class	Cure: public AMateria
 		Cure();
 		~Cure();
 		Cure(Cure &original);
-		Cure& operator = (Cure &other);
+		Cure& operator = (const Cure &other);
 		AMateria*	clone() const;
+		void	use(ICharacter &target);
 };
 
 #endif

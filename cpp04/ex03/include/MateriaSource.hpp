@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 12:49:15 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/11 15:29:07 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/11 16:43:39 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class	MateriaSource: public IMateriaSource
 		MateriaSource& operator = (MateriaSource &other);
 		MateriaSource(MateriaSource &original);
 		void		learnMateria(AMateria* m);
-		AMateria*	createMateria(std::string const& m);
+		AMateria*	createMateria(std::string const &m);
 };
 
 #endif

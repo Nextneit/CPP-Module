@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 13:01:56 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/11 15:54:09 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/11 17:16:36 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,12 @@ Character::Character()
 		i++;
 	}
 	i = 0;
-	while (i < 500)
+	while (i < 100)
 	{
 		this->unequiped[i] = NULL;
 		i++;
 	}
+	std::cout << "Character default construcot has been called." << std::endl;
 }
 
 Character::Character(std::string name)
@@ -39,16 +40,18 @@ Character::Character(std::string name)
 		i++;
 	}
 	i = 0;
-	while (i < 500)
+	while (i < 100)
 	{
 		this->unequiped[i] = NULL;
 		i++;
 	}
+	std::cout << "Character named " << this->name << " has been created." << std::endl;
 }
 
 Character::Character(Character &original)
 {
 	*this = original;
+	std::cout << "Character copy constructor has been called." << std::endl;
 }
 
 Character&	Character::operator = (const Character &other)
@@ -68,7 +71,7 @@ Character&	Character::operator = (const Character &other)
 			i++;
 		}
 		i = 0;
-		while (i < 500)
+		while (i < 100)
 		{
 			if (this->unequiped[i] != NULL)
 				delete this->unequiped[i];
@@ -79,6 +82,7 @@ Character&	Character::operator = (const Character &other)
 			i++;
 		}
 	}
+	std::cout << "Character copy operator has been called." << std::endl;
 	return (*this);
 }
 
@@ -95,10 +99,11 @@ Character::~Character()
 	i = 0;
 	while (i < 100)
 	{
-		if (this->unequiped != NULL)
+		if (this->unequiped[i] != NULL)
 			delete this->unequiped[i];
 		i++;
 	}
+	std::cout << "Character has been destroyed." << std::endl;
 }
 
 std::string const & Character::getName() const
@@ -115,7 +120,7 @@ void	Character::equip(AMateria* m)
 	if (this->inventory[i] == NULL)
 	{
 		this->inventory[i] = m;
-		std::cout << "The Materia has been equipped." << std::cout;
+		std::cout << "The Materia has been equipped." << std::endl;
 		return ;
 	}
 	else
@@ -141,14 +146,14 @@ void	Character::unequip(int idx)
 	}
 	else if (idx > 3 || idx < 0)
 		std::cout << "Incorrect index for unequip." << std::endl;
-	else if (this->inventory[i] == NULL)
+	else if (this->inventory[idx] == NULL)
 		std::cout << "Empty inventory, can't unequip" << std::endl;
 }
 
 void	Character::use(int idx, ICharacter& target)
 {
-	if (idx <= 3 && idx >= 0 && this->inventory[i] != NULL)
-		inventory[idx].use(*target);
+	if (idx <= 3 && idx >= 0 && this->inventory[idx] != NULL)
+		inventory[idx]->use(target);
 	else if (idx > 3 || idx < 0)
 		std::cout << "Incorrect index for inventory." << std::endl;
 	else if (this->inventory[idx] == NULL)
