@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 13:03:48 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/10 18:56:48 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/11 12:54:03 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,12 @@
 
 MateriaSource::MateriaSource()
 {
+	int	i = 0;
+	while (i < 4)
+	{
+		this->inventory[i] = NULL;
+		i++;
+	}
 }
 
 ~MateriaSource::MateriaSource()
@@ -22,7 +28,8 @@ MateriaSource::MateriaSource()
 
 	while (this->inventory[i])
 	{
-		delete this->inventory[i];
+		if (this->inventory[i] != NULL)
+			delete this->inventory[i];
 		i++;
 	}
 }
@@ -52,12 +59,18 @@ void	MateriaSource::learnMateria(AMateria m*)
 
 	while (this->inventory[i])
 		i++;
-	if (i < 4)
+	if (i < 4 && this->inventory[i] == NULL)
 	{
+		std::cout << "Materia learned." << std::endl;
 		this->inventory[i] = *m;
 		return ;
 	}
-	else if ()
+	else
+	{
+		std::cout << "Materia can't be learned." << std::endl;
+		delete m;
+		return ;
+	}
 }
 
 AMateria*	createMateria(std::string const& m)
