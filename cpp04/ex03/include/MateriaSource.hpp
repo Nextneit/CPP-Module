@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 12:49:15 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/10 15:17:05 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/11 15:29:07 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define MATERIASOURCE_HPP
 
 # include <iostream>
+# include "IMateriaSource.hpp"
 
 class	MateriaSource: public IMateriaSource
 {
@@ -26,6 +27,6 @@ class	MateriaSource: public IMateriaSource
 		MateriaSource(MateriaSource &original);
 		void		learnMateria(AMateria* m);
 		AMateria*	createMateria(std::string const& m);
-}
+};
 
 #endif

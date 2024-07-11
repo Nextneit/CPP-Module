@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 12:39:38 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/10 15:17:32 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/11 15:46:01 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 # define CHARACTER_HPP
 
 # include <iostream>
+# include "Cure.hpp"
+# include "Ice.hpp"
+# include "ICharacter.hpp"
 
 class	Character: public ICharacter
 {
@@ -25,12 +28,12 @@ class	Character: public ICharacter
 		Character();
 		Character(std::string name);
 		Character(Character &original);
-		Character& operator = (Character &other);
+		Character& operator = (const Character &other);
 		~Character();
-		std::string const& getName();
+		std::string const & getName() const;
 		void	equip(AMateria* m);
 		void	unequip(int idx);
-		void	use(int idx, Character& target);
+		void	use(int idx, ICharacter& target);
 };
 
 #endif

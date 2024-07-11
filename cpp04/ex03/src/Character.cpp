@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 13:01:56 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/11 12:08:56 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/11 15:54:09 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,14 +46,14 @@ Character::Character(std::string name)
 	}
 }
 
-Character&	Character::Character(Character &original)
+Character::Character(Character &original)
 {
 	*this = original;
 }
 
-Character&	Character::operator = (const Character& other)
+Character&	Character::operator = (const Character &other)
 {
-	if (this != other)
+	if (this != &other)
 	{
 		this->name = other.name;
 		int	i = 0;
@@ -86,17 +86,24 @@ Character::~Character()
 {
 	int	i = 0;
 
-	while (this->inventory[i])
+	while (i < 4)
 	{
-		delete this->inventory[i];
+		if (this->inventory[i] != NULL)
+			delete this->inventory[i];
 		i++;
 	}
 	i = 0;
-	while (this->unequiped[i])
+	while (i < 100)
 	{
-		delete this->unequiped[i];
+		if (this->unequiped != NULL)
+			delete this->unequiped[i];
 		i++;
 	}
+}
+
+std::string const & Character::getName() const
+{
+	return (this->name);
 }
 
 void	Character::equip(AMateria* m)
@@ -124,13 +131,13 @@ void	Character::equip(AMateria* m)
 
 void	Character::unequip(int idx)
 {
-	if (idx <= 3 && idx >= 0 && this->inventory[i] != NULL)
+	if (idx <= 3 && idx >= 0 && this->inventory[idx] != NULL)
 	{
 		int i = 0;
 		while (this->unequiped[i] != NULL)
 			i++;
-		this->unequiped[i] = new AMateria(this->inventory[idx]);
-		delete this->inventory[idx];
+		this->unequiped[i] = this->inventory[idx];
+		this->inventory[idx] = NULL;
 	}
 	else if (idx > 3 || idx < 0)
 		std::cout << "Incorrect index for unequip." << std::endl;
@@ -138,12 +145,12 @@ void	Character::unequip(int idx)
 		std::cout << "Empty inventory, can't unequip" << std::endl;
 }
 
-void	Character::use(int idx, Character& target)
+void	Character::use(int idx, ICharacter& target)
 {
 	if (idx <= 3 && idx >= 0 && this->inventory[i] != NULL)
 		inventory[idx].use(*target);
 	else if (idx > 3 || idx < 0)
 		std::cout << "Incorrect index for inventory." << std::endl;
-	else if (this->inventory[i] == NULL)
-		std::cout << "Can't use an unequipped materia." << std::endl
+	else if (this->inventory[idx] == NULL)
+		std::cout << "Can't use an unequipped materia." << std::endl;
 }

@@ -6,12 +6,12 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 15:05:34 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/09 17:54:40 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/11 15:25:07 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./include/AMateria.hpp"
-#include "./include/ICharacter.hpp"
+#include "./include/MateriaSource.hpp"
+#include "./include/Character.hpp"
 
 int main()
 {

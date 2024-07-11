@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 15:10:47 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/10 12:46:24 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/11 15:38:11 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define ICHARACTER_HPP
 
 # include "AMateria.hpp"
-# include <iostream>
 
 class	AMateria;
 
