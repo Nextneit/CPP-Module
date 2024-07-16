@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 11:46:53 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/15 12:27:03 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/15 16:39:32 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,11 @@ class   Bureaucrat
 		Bureaucrat();
 		Bureaucrat(std::string const name, int grade);
 		~Bureaucrat();
+		Bureaucrat& operator = (const Bureaucrat &other);
+		std::string	getName();
+		int			getGrade();
 };
+
+std::ostream& operator << (std::ostream& out, const Fixed& nbr);
 
 #endif
