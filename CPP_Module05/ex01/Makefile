@@ -1,4 +1,4 @@
-NAME = Bureaucrat
+NAME = Form
 
 CC = c++
 
@@ -8,6 +8,7 @@ RM = rm -rf
 
 SRCS = main.cpp\
 		./src/Bureaucrat.cpp\
+		./src/Form.cpp\
 
 OBJS = $(SRCS:.cpp=.o)
 

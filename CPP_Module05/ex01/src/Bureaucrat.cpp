@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 11:46:55 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/16 15:20:36 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/16 18:29:40 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,4 +88,19 @@ const char	*Bureaucrat::GradeToLowException::what() const throw()
 std::ostream& operator << (std::ostream& out, const Bureaucrat& b)
 {
 	return (out << b.getName() << ", bureaucrat grade " << b.getGrade() << "." << std::endl);
+}
+
+void	Bureaucrat::signForm(Form &f)
+{
+	try
+	{
+		if (this->grade <= 0)
+			throw Bureaucrat::GradeToLowException();
+		else if (this->grade > 150)
+			throw Bureaucrat::GradeToHighException();
+		f.beSigned(*this);
+		std::cout << *this << " signed " << f.getName() << std::endl;
+	}
+	catch(const std::exception& e)
+		std::cout << this->name << " couldn't sign " << f.getName() << " because " << e.what() << std::endl;
 }

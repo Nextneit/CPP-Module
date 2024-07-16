@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 15:24:40 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/16 16:47:02 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/16 17:05:19 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ Form::Form(): name("Default")
 	this->sign = false;
 }
 
-Form::Form(std::string const name, int grade): name(name)
+Form::Form(std::string const name, int grade_to_sign, int grade_to_exe): name(name)
 {
-	if (grade < 1)
+	if (grade_to_sign < 1 || grade_to_exe < 1)
 		throw Form::GradeToLowException();
-	else if (grade > 150)
+	else if (grade_to_sign > 150 || grade_to_exe > 150)
 		throw Form::GradeToHighException();
 	else
 	{
@@ -44,9 +44,9 @@ Form& Form::operator = (const Form &other): name(other.name)
 {
 	if (this != &other)
 	{
-		if (other.grade_to_sign <= 0)
+		if (other.grade_to_sign < 1 || other.grade_to_exe < 1)
 			throw Form::GradeToLowException();
-		else if (other.grade_to_sign > 150)
+		else if (other.grade_to_sign > 150 || other.grade_to_exe > 150)
 			throw Form::GradeToHighException();
 		else
 		{

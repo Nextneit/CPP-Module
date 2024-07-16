@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 11:46:53 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/16 16:44:36 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/16 17:55:51 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define BUREAUCRAT_HPP
 
 # include <iostream>
+# include "Form.hpp"
 
 class   Bureaucrat
 {
@@ -40,6 +41,7 @@ class   Bureaucrat
 			public:
 				const char	*what() const throw();
 		};
+		void	signForm(Form &f);
 };
 
 std::ostream& operator << (std::ostream& out, const Bureaucrat& b);
