@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 11:46:53 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/16 17:55:51 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/17 10:15:07 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include <iostream>
 # include "Form.hpp"
+
+class	Form;
 
 class   Bureaucrat
 {
@@ -34,12 +36,18 @@ class   Bureaucrat
 		class	GradeToHighException: public std::exception
 		{
 			public:
-				const char	*what() const throw();
+				const char	*what() const throw()
+				{
+					return ("Grade To High.");
+				}
 		};
 		class	GradeToLowException: public std::exception
 		{
 			public:
-				const char	*what() const throw();
+				const char	*what() const throw()
+				{
+					return ("Grade To Low.");
+				}
 		};
 		void	signForm(Form &f);
 };

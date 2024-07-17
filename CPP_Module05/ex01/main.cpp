@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 11:45:32 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/16 17:07:20 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/17 10:27:42 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ int main()
 	Form		*f2 = NULL;
 	try
 	{
-		b1 = new Bureaucrat("Antonio", 149);
-		b2 = new Bureaucrat("Juan", 26);
+		b1 = new Bureaucrat("Pedro Sanchez", 149);
+		b2 = new Bureaucrat("Rajoy", 26);
 		b3 = new Bureaucrat(*b1);
 		f1 = new Form("B1", 150, 100);
 		f2 = new Form("B2", 25, 75);

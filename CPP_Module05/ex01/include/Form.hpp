@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 15:24:44 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/16 17:58:58 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/17 10:27:17 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ class	Form
 {
 	private:
 		std::string const name;
-		int const	grade_to_sign;
-		int const	grade_to_exe;
-		bool	sign;
+		const int	grade_to_sign;
+		const int	grade_to_exe;
+		bool		sign;
 	public:
 		Form();
 		Form(std::string const name, int grade_to_sign, int grade_to_exe);
@@ -47,6 +47,6 @@ class	Form
 		};
 };
 
-std::ostream& operator << (std::ostream& out, const Form& f);
+std::ostream& operator << (std::ostream& out, Form& f);
 
 #endif
