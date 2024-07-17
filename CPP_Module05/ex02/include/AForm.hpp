@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.hpp                                           :+:      :+:    :+:   */
+/*   AForm.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 15:24:44 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/17 10:27:17 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/17 11:35:39 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FORM_HPP
-# define FORM_HPP
+#ifndef AFORM_HPP
+# define AFORM_HPP
 
 # include <iostream>
 # include "Bureaucrat.hpp"
@@ -26,15 +26,16 @@ class	Form
 		const int	grade_to_exe;
 		bool		sign;
 	public:
-		Form();
-		Form(std::string const name, int grade_to_sign, int grade_to_exe);
-		Form(Form& original);
-		~Form();
-		Form& operator = (const Form &other);
+		AForm();
+		AForm(std::string const name, int grade_to_sign, int grade_to_exe);
+		AForm(AForm& original);
+		virtual ~AForm();
+		AForm& operator = (const AForm &other);
 		std::string	getName();
 		int	getSignGrade();
 		int	getExeGrade();
 		void	beSigned(Bureaucrat &b);
+		virtual bool execute(Bureaucrat const &executor) const = 0;
 		class	GradeToHighException: public std::exception
 		{
 			public:

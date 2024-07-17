@@ -1,4 +1,4 @@
-NAME = Form
+NAME = AForm
 
 CC = c++
 
@@ -8,7 +8,7 @@ RM = rm -rf
 
 SRCS = main.cpp\
 		./src/Bureaucrat.cpp\
-		./src/Form.cpp\
+		./src/AForm.cpp\
 		./src/PresidentialPardonForm.cpp\
 		./src/RobotomyRequestForm.cpp\
 		./src/ShruberryCreationForm.cpp\
