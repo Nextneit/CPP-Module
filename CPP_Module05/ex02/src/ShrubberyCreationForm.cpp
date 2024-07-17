@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 10:45:40 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/17 12:25:12 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/17 12:47:55 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,4 @@ ShrubberyCreationForm::ShrubberyCreationForm(std::string target)
 
 ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm &original)
 {
-	this->target = original.target;
 }
