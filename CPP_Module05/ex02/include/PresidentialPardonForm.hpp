@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 10:38:59 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/17 12:12:04 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/17 12:19:11 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class	PresidentialPardonForm: public AForm
 		std::string	target;
 		PresidentialPardonForm();
 	public:
+		PresidentialPardonForm(std::string target);
 		~PresidentialPardonForm();
 		PresidentialPardonForm(PresidentialPardonForm &original);
 		PresidentialPardonForm&	operator = (PresidentialPardonForm &other);
