@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 10:46:37 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/18 12:38:01 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/18 12:43:40 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,9 @@ PresidentialPardonForm&	PresidentialPardonForm::operator = (PresidentialPardonFo
 	if (this != &other)
 		this->target = &other.target;
 	return (*this);
+}
+
+std::string	PresidentialPardonForm::getTarget()
+{
+	return (this->target);
 }
