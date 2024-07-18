@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 10:46:37 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/18 12:43:40 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/18 15:27:55 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,22 @@ PresidentialPardonForm&	PresidentialPardonForm::operator = (PresidentialPardonFo
 std::string	PresidentialPardonForm::getTarget()
 {
 	return (this->target);
+}
+
+bool	PresidentialPardonForm::execute(Bureaucrat const &executor) const
+{
+	try
+	{
+		if (!this->beSigned())
+			throw AForm::FormNotSignedException();
+		else if (executor.getGrade() > this->getExeGrade())
+			throw AForm::GradeToLowException();
+		std::cout << this->target << "has been pardoned." << std::endl;
+		return (true);
+	}
+	catch (const std::exception &e)
+	{
+		std::cerr << e.what() << std::endl;
+		return (false);
+	}
 }

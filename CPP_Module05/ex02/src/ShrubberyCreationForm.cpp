@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 10:45:40 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/18 12:42:49 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/18 15:29:40 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,22 @@ ShrubberyCreationForm&	ShrubberyCreationForm::operator = (ShrubberyCreationForm 
 std::string	ShrubberyCreationForm::getTarget()
 {
 	return (this->target);
+}
+
+bool	ShrubberyCreationForm::execute(Bureaucrat const &executor)
+{
+	try
+	{
+		if (!this->beSigned())
+			throw AForm::FormNotSignedException();
+		else if (executor.getGrade() > this->getExeGrade())
+			throw AForm::GradeToLowException();
+		std::cout << this->target << "has been pardoned." << std::endl;
+		return (true);
+	}
+	catch (const std::exception &e)
+	{
+		std::cerr << e.what() << std::endl;
+		return (false);
+	}
 }

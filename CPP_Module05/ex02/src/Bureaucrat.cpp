@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 11:46:55 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/17 10:14:32 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/18 15:11:28 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,5 +94,13 @@ void	Bureaucrat::signForm(Form &f)
 	catch(const std::exception& e)
 	{
 		std::cerr << this->name << " couldn't sign " << f.getName() << " because " << e.what() << std::endl;
+	}
+}
+
+void	Bureaucrat::executeForm(AForm const &f)
+{
+	try
+	{
+		if 
 	}
 }

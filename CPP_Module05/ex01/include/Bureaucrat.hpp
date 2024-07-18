@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 11:46:53 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/17 10:15:07 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/18 15:07:07 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ class   Bureaucrat
 		int			getGrade() const;
 		void	increment();
 		void	decrement();
+		void	signForm(Form &f);
 		class	GradeToHighException: public std::exception
 		{
 			public:
