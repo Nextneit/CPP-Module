@@ -6,20 +6,23 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 11:45:32 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/18 17:43:07 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/18 18:15:22 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./include/Bureaucrat.hpp"
 #include "./include/AForm.hpp"
+#include "./include/ShrubberyCreationForm.hpp"
+#include "./include/RobotomyRequestForm.hpp"
+#include "./include/PresidentialPardonForm.hpp"
 
 int main()
 {
 	Bureaucrat	*b1 = NULL;
 	Bureaucrat	*b2 = NULL;
 	Bureaucrat	*b3 = NULL;
-	Form		*f1 = NULL;
-	Form		*f2 = NULL;
+	AForm		*f1 = NULL;
+	AForm		*f2 = NULL;
 	try
 	{
 		b1 = new Bureaucrat("Pedro Sanchez", 149);
