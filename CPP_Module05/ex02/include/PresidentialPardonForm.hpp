@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 10:38:59 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/18 12:42:21 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/18 17:40:16 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,14 @@ class	PresidentialPardonForm: public AForm
 		PresidentialPardonForm(PresidentialPardonForm &original);
 		PresidentialPardonForm&	operator = (PresidentialPardonForm &other);
 		std::string	getTarget();
+		class	FormNotSignedException: public std::exception
+		{
+			public:
+				const char	*what() const throw()
+				{
+					return ("form not signed.");
+				}
+		};
 };
 
 #endif

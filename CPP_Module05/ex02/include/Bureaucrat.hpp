@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 11:46:53 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/18 15:05:37 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/18 17:41:23 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <iostream>
 # include "AForm.hpp"
 
-class	Form;
+class	AForm;
 
 class   Bureaucrat
 {

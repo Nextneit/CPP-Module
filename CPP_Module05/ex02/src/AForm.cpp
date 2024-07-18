@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/AAForm.hpp"
+#include "../include/AForm.hpp"
 
 AForm::AForm(): name("Default"), grade_to_sign(1), grade_to_exe(1), sign(false)
 {

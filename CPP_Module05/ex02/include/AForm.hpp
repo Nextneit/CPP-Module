@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 15:24:44 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/17 11:35:39 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/18 17:43:44 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 class	Bureaucrat;
 
-class	Form
+class	AForm
 {
 	private:
 		std::string const name;
@@ -48,6 +48,6 @@ class	Form
 		};
 };
 
-std::ostream& operator << (std::ostream& out, Form& f);
+std::ostream& operator << (std::ostream& out, AForm& f);
 
 #endif

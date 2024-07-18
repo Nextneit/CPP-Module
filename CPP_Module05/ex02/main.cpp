@@ -6,12 +6,13 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 11:45:32 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/17 10:27:42 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/18 17:43:07 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./include/Bureaucrat.hpp"
-#include "./include/Form.hpp"
+#include "./include/AForm.hpp"
+
 int main()
 {
 	Bureaucrat	*b1 = NULL;
@@ -24,8 +25,8 @@ int main()
 		b1 = new Bureaucrat("Pedro Sanchez", 149);
 		b2 = new Bureaucrat("Rajoy", 26);
 		b3 = new Bureaucrat(*b1);
-		f1 = new Form("B1", 150, 100);
-		f2 = new Form("B2", 25, 75);
+		f1 = new RobotomyRequestForm("B1", 150, 100);
+		f2 = new PresidentialPardonForm("B2", 25, 75);
 		
 		std::cout << "b3 :" << *b3 <<std::endl;
 		*b3 = *b2;
