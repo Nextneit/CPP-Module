@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 10:45:40 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/18 15:29:40 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/18 15:45:49 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,19 @@ bool	ShrubberyCreationForm::execute(Bureaucrat const &executor)
 			throw AForm::FormNotSignedException();
 		else if (executor.getGrade() > this->getExeGrade())
 			throw AForm::GradeToLowException();
-		std::cout << this->target << "has been pardoned." << std::endl;
+		std::string name(this->target + "_shrubbery");
+		std::ofstream out(name.c_str());
+		out << "               ,@@@@@@@," << std::endl;
+		out << "       ,,,.   ,@@@@@@/@@,  .oo8888o." << std::endl;
+		out << "       ,&%%&%&&%,@@@@@/@@@@@@,8888\\88/8o" << std::endl;
+		out << "   ,%&\\%&&%&&%,@@@\\@@@/@@@88\\88888/88'" << std::endl;
+		out << "   %&&%&%&/%&&%@@\\@@/ /@@@88888\\88888'" << std::endl;
+		out << "   %&&%/ %&%%&&@@\\ V /@@' `88\\8 `/88'" << std::endl;
+		out << "   `&%\\ ` /%&'    |.|        \\ '|8'" << std::endl;
+		out << "       |o|        | |         | |" << std::endl;
+		out << "       |.|        | |         | |" << std::endl;
+		out << "   .\\. \\/ ._\\//_/__/  ,\\_//__\\/.  \\_//__/_" << std::endl;
+		out.close();
 		return (true);
 	}
 	catch (const std::exception &e)
