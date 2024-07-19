@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 12:56:39 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/19 14:45:07 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/19 14:49:37 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,8 @@ AForm*	Intern::makeForm(std::string s, std::string name)
 		case 2:
 		{
 			f = new ShrubberyCreationForm(name);
-			std::cout << "Intern created: " << std::endl << *f << std::endl;			return (f);
+			std::cout << "Intern created: " << std::endl << *f << std::endl;
+			return (f);
 		}
 		default:
 			std::cout << "Incorrect form." << std::endl;
