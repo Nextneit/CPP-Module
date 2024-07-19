@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 11:45:32 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/19 12:35:02 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/19 14:40:21 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include "./include/ShrubberyCreationForm.hpp"
 #include "./include/RobotomyRequestForm.hpp"
 #include "./include/PresidentialPardonForm.hpp"
+#include "./include/Intern.hpp"
 
 int main()
 {
@@ -25,6 +26,8 @@ int main()
 	AForm		*f3 = NULL;
 	ShrubberyCreationForm *s1 = NULL;
 	ShrubberyCreationForm *s2 = NULL;
+	Intern	random;
+	AForm*	rf;
 	try
 	{
 		b1 = new Bureaucrat("Pedro Sanchez", 150);
@@ -52,6 +55,9 @@ int main()
 		std::cout << *f2 << std::endl;
 		std::cout << *f3 << std::endl;
 		std::cout << std::endl;
+		rf = random.makeForm("RobotomyRequestForm", "Bender");
+		if (rf)
+			std::cout << *rf << std::endl << std::endl;
 		std::cout << "--------COPY TEST---------" << std::endl;
 		s1 = new ShrubberyCreationForm("prueba");
 		s2 = new ShrubberyCreationForm("pepe");

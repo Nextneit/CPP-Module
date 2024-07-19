@@ -1,4 +1,4 @@
-NAME = AForm
+NAME = Intern
 
 CC = c++
 
@@ -12,6 +12,7 @@ SRCS = main.cpp\
 		./src/PresidentialPardonForm.cpp\
 		./src/RobotomyRequestForm.cpp\
 		./src/ShrubberyCreationForm.cpp\
+		./src/Intern.cpp\
 
 OBJS = $(SRCS:.cpp=.o)
 
