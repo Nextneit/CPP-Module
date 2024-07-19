@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 11:45:32 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/19 11:43:21 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/19 12:35:02 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,18 +38,19 @@ int main()
 		b1->signForm(*f1);
 		b1->executeForm(*f1);
 		//b2->executeForm(*f1);
+		std::cout << std::endl;
 		b1->signForm(*f2);
 		b2->signForm(*f2);
 		b1->executeForm(*f2);
 		b2->executeForm(*f2);
+		std::cout << std::endl;
 		b1->signForm(*f3);
-		b2->signForm(*f3);
 		b1->executeForm(*f3);
+		b2->signForm(*f3);
 		b2->executeForm(*f3);
-		std::cout << *f1 << std::endl;
+		std::cout << std::endl << *f1 << std::endl;
 		std::cout << *f2 << std::endl;
 		std::cout << *f3 << std::endl;
-
 		std::cout << std::endl;
 		std::cout << "--------COPY TEST---------" << std::endl;
 		s1 = new ShrubberyCreationForm("prueba");
