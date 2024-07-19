@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 10:45:40 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/19 11:05:35 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/19 12:10:00 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,6 @@ bool	ShrubberyCreationForm::execute(Bureaucrat const &executor) const
 	}
 	catch (const std::exception &e)
 	{
-		std::cerr << e.what() << std::endl;
 		return (false);
 	}
 }

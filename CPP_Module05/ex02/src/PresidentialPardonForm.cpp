@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 10:46:37 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/19 11:36:24 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/19 12:10:03 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ std::string	PresidentialPardonForm::getTarget()
 
 bool	PresidentialPardonForm::execute(Bureaucrat const &executor) const
 {
+	bool exe = false;
 	try
 	{
 		if (!this->getIsSigned())
@@ -51,11 +52,11 @@ bool	PresidentialPardonForm::execute(Bureaucrat const &executor) const
 		else if (executor.getGrade() > this->getExeGrade())
 			throw AForm::GradeToLowException();
 		std::cout << this->target << " has been pardoned." << std::endl;
+		exe = true;
 		return (true);
 	}
 	catch (const std::exception &e)
 	{
-		std::cerr << e.what() << std::endl;
-		return (false);
+		return (exe);
 	}
 }

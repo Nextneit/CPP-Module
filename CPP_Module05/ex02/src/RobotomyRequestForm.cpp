@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 10:46:04 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/19 11:09:18 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/19 12:09:43 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ std::string	RobotomyRequestForm::getTarget()
 
 bool	RobotomyRequestForm::execute(Bureaucrat const &executor) const
 {
+	bool	exe = false;
 	try
 	{
 		srand(time(0));
@@ -56,11 +57,11 @@ bool	RobotomyRequestForm::execute(Bureaucrat const &executor) const
 			std::cout << target << " has been robotomized." << std::endl;
 		else
 			std::cout << this->target << " has not been robotomized." << std::endl;
-		return (true);
+		exe = true;
+		return (exe);
 	}
 	catch (const std::exception &e)
 	{
-		std::cerr << e.what() << std::endl;
-		return (false);
+		return (exe);
 	}
 }
