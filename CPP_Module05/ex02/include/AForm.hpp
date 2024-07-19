@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 15:24:44 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/18 17:43:44 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/19 11:43:59 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,20 +31,35 @@ class	AForm
 		AForm(AForm& original);
 		virtual ~AForm();
 		AForm& operator = (const AForm &other);
-		std::string	getName();
-		int	getSignGrade();
-		int	getExeGrade();
+		std::string	getName() const;
+		int	getSignGrade() const;
+		int	getExeGrade() const;
+		bool	getIsSigned() const;
 		void	beSigned(Bureaucrat &b);
 		virtual bool execute(Bureaucrat const &executor) const = 0;
 		class	GradeToHighException: public std::exception
 		{
 			public:
-				const char	*what() const throw();
+				const char	*what() const throw()
+				{
+					return ("grade to high.");
+				};
 		};
 		class	GradeToLowException: public std::exception
 		{
 			public:
-				const char	*what() const throw();
+				const char	*what() const throw()
+				{
+					return ("grade to low.");
+				};
+		};
+		class FormNotSignedException : public std::exception
+		{
+			public:
+				const char *what() const throw()
+				{
+					return ("form not signed.");
+				};
 		};
 };
 

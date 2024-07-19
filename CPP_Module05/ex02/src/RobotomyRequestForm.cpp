@@ -6,18 +6,18 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 10:46:04 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/18 15:39:44 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/19 11:09:18 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/RobotomyRequestForm.hpp"
 
-RobotomyRequestForm::RobotomyRequestForm()
+RobotomyRequestForm::RobotomyRequestForm(): AForm("RobotomyRequestForm", 72, 45)
 {
 	this->target = "Default";
 }
 
-RobotomyRequestForm::RobotomyRequestForm(std::string target)
+RobotomyRequestForm::RobotomyRequestForm(std::string target): AForm("RobotomyRequestForm", 72, 45)
 {
 	this->target = target;
 }
@@ -33,7 +33,7 @@ RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm &original): target(
 RobotomyRequestForm&	RobotomyRequestForm::operator = (RobotomyRequestForm &other)
 {
 	if (this != &other)
-		this->target = &other.target;
+		this->target = other.target;
 	return (*this);
 }
 
@@ -48,14 +48,14 @@ bool	RobotomyRequestForm::execute(Bureaucrat const &executor) const
 	{
 		srand(time(0));
 		int i = rand() % 2; 
-		if (!this->beSigned())
+		if (!this->getIsSigned())
 			throw AForm::FormNotSignedException();
 		else if (executor.getGrade() > this->getExeGrade())
 			throw AForm::GradeToLowException();
 		if (i)
-			std::cout << target << "has been robotomized." << std::endl;
+			std::cout << target << " has been robotomized." << std::endl;
 		else
-			std::cout << this->target << "has not been robotomized." << std::endl;
+			std::cout << this->target << " has not been robotomized." << std::endl;
 		return (true);
 	}
 	catch (const std::exception &e)

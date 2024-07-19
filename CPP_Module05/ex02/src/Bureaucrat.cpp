@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 11:46:55 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/18 15:54:47 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/19 11:45:31 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,7 @@ Bureaucrat::Bureaucrat(std::string const name, int grade): name(name)
 		throw Bureaucrat::GradeToLowException();
 	else if (grade > 150)
 		throw Bureaucrat::GradeToHighException();
-	else
-		this->grade = grade;
+	this->grade = grade;
 }
 
 Bureaucrat::~Bureaucrat()
@@ -80,7 +79,7 @@ std::ostream& operator << (std::ostream& out, const Bureaucrat& b)
 	return (out << b.getName() << ", bureaucrat grade " << b.getGrade() << "." << std::endl);
 }
 
-void	Bureaucrat::signForm(Form &f)
+void	Bureaucrat::signForm(AForm &f)
 {
 	try
 	{
@@ -89,7 +88,7 @@ void	Bureaucrat::signForm(Form &f)
 		else if (this->grade > 150)
 			throw Bureaucrat::GradeToHighException();
 		f.beSigned(*this);
-		std::cout << *this << " signed " << f.getName() << std::endl;
+		std::cout << this->name << " signed " << f.getName() << "." << std::endl;
 	}
 	catch(const std::exception& e)
 	{
@@ -102,9 +101,9 @@ void	Bureaucrat::executeForm(AForm const &f)
 	try
 	{
 		if (f.execute(*this))
-			std::cout << this->getName() << " executed " << f.getName() << std::endl;
+			std::cout << this->getName() << " executed " << f.getName() << "." <<std::endl;
 		else
-			std::cout << this->getName() << " couldn't execute " << f.getName() << std::endl;
+			std::cout << this->getName() << " couldn't execute " << f.getName() << "." << std::endl;
 	}
 	catch(const std::exception& e)
 	{

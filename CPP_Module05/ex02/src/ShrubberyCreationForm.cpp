@@ -6,13 +6,13 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 10:45:40 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/18 15:45:49 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/19 11:05:35 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ShrubberyCreationForm.hpp"
 
-ShrubberyCreationForm::ShrubberyCreationForm()
+ShrubberyCreationForm::ShrubberyCreationForm(): AForm("ShrubberyCreationForm", 145, 137)
 {
 	this->target = "Default";
 }
@@ -21,7 +21,7 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
 {
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(std::string target)
+ShrubberyCreationForm::ShrubberyCreationForm(std::string target): AForm("ShrubberyCreationForm", 145, 137)
 {
 	this->target = target;
 }
@@ -33,7 +33,7 @@ ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm &original): t
 ShrubberyCreationForm&	ShrubberyCreationForm::operator = (ShrubberyCreationForm &other)
 {
 	if (this != &other)
-		this->target = &other.target;
+		this->target = other.target;
 	return (*this);
 }
 
@@ -42,11 +42,11 @@ std::string	ShrubberyCreationForm::getTarget()
 	return (this->target);
 }
 
-bool	ShrubberyCreationForm::execute(Bureaucrat const &executor)
+bool	ShrubberyCreationForm::execute(Bureaucrat const &executor) const
 {
 	try
 	{
-		if (!this->beSigned())
+		if (!this->getIsSigned())
 			throw AForm::FormNotSignedException();
 		else if (executor.getGrade() > this->getExeGrade())
 			throw AForm::GradeToLowException();

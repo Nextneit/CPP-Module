@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 10:40:32 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/18 17:39:59 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/19 10:52:57 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define SHRUBBERYCREATIONFORM_HPP
 
 # include "AForm.hpp"
+# include <fstream>
 
 class	ShrubberyCreationForm: public AForm
 {
@@ -26,14 +27,7 @@ class	ShrubberyCreationForm: public AForm
 		ShrubberyCreationForm(ShrubberyCreationForm &original);
 		ShrubberyCreationForm&	operator = (ShrubberyCreationForm &other);
 		std::string	getTarget();
-		class	FormNotSignedException: public std::exception
-		{
-			public:
-				const char	*what() const throw()
-				{
-					return ("form not signed.");
-				}
-		};
+		bool execute(Bureaucrat const &executor) const;
 };
 
 #endif

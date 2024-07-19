@@ -50,29 +50,24 @@ AForm::~AForm()
 {	
 }
 
-std::string	AForm::getName()
+std::string	AForm::getName() const
 {
 	return (this->name);
 }
 
-int	AForm::getSignGrade()
+int	AForm::getSignGrade() const
 {
 	return (this->grade_to_sign);
 }
 
-int	AForm::getExeGrade()
+int	AForm::getExeGrade() const
 {
 	return (this->grade_to_exe);
 }
 
-const char	*AForm::GradeToHighException::what() const throw()
+bool	AForm::getIsSigned() const
 {
-	return ("Grade To High.");
-}
-
-const char	*AForm::GradeToLowException::what() const throw()
-{
-	return ("Grade To Low.");
+	return (this->sign);
 }
 
 std::ostream& operator << (std::ostream& out, AForm& f)

@@ -6,18 +6,18 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 10:46:37 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/18 15:27:55 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/19 11:36:24 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/PresidentialPardonForm.hpp"
 
-PresidentialPardonForm::PresidentialPardonForm()
+PresidentialPardonForm::PresidentialPardonForm(): AForm("PresidentialPardonForm", 25, 5)
 {
 	this->target = "Default";
 }
 
-PresidentialPardonForm::PresidentialPardonForm(std::string target)
+PresidentialPardonForm::PresidentialPardonForm(std::string target): AForm("PresidentialPardonForm", 25, 5)
 {
 	this->target = target;
 }
@@ -33,7 +33,7 @@ PresidentialPardonForm::PresidentialPardonForm(PresidentialPardonForm &original)
 PresidentialPardonForm&	PresidentialPardonForm::operator = (PresidentialPardonForm &other)
 {
 	if (this != &other)
-		this->target = &other.target;
+		this->target = other.target;
 	return (*this);
 }
 
@@ -46,11 +46,11 @@ bool	PresidentialPardonForm::execute(Bureaucrat const &executor) const
 {
 	try
 	{
-		if (!this->beSigned())
+		if (!this->getIsSigned())
 			throw AForm::FormNotSignedException();
 		else if (executor.getGrade() > this->getExeGrade())
 			throw AForm::GradeToLowException();
-		std::cout << this->target << "has been pardoned." << std::endl;
+		std::cout << this->target << " has been pardoned." << std::endl;
 		return (true);
 	}
 	catch (const std::exception &e)

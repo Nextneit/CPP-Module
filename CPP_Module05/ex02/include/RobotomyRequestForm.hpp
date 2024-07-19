@@ -6,14 +6,15 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 10:40:01 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/18 17:40:11 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/19 10:50:24 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ROBOTOMYREQUESTFORM_HPP
 # define ROBOTOMYREQUESTFORM_HPP
 
-#include "AForm.hpp"
+# include "AForm.hpp"
+# include <cstdlib>
 
 class	RobotomyRequestForm: public AForm
 {
@@ -26,14 +27,7 @@ class	RobotomyRequestForm: public AForm
 		RobotomyRequestForm(RobotomyRequestForm &original);
 		RobotomyRequestForm&	operator = (RobotomyRequestForm &other);
 		std::string	getTarget();
-		class	FormNotSignedException: public std::exception
-		{
-			public:
-				const char	*what() const throw()
-				{
-					return ("form not signed.");
-				}
-		};
+		bool execute(Bureaucrat const &executor) const;
 };
 
 #endif
