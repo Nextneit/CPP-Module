@@ -7,8 +7,10 @@ FLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -rf
 
 SRCS = main.cpp\
-		./src/Serializer.cpp\
-		./src/Data.cpp\
+		./src/A.cpp\
+		./src/B.cpp\
+		./src/C.cpp\
+		./src/Base.cpp\
 
 OBJS = $(SRCS:.cpp=.o)
 
