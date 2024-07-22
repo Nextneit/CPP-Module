@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 14:54:02 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/22 13:31:28 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/22 13:34:15 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -152,7 +152,7 @@ void	ScalarConverter::convert(std::string arg)
 		{
 			std::cout << "char: non displayable" << std::endl;
 			std::cout << "int: non displayable" << std::endl;
-			std::cout << "float: " << arg << std::endl;
+			std::cout << "float: " << arg << "f" <<std::endl;
 			std::cout << "double: " << arg.substr(0, arg.length() - 1) << std::endl;
 			break ;
 		}
@@ -160,7 +160,7 @@ void	ScalarConverter::convert(std::string arg)
 		{
 			std::cout << "char: non displayable" << std::endl;
 			std::cout << "int: non displayable" << std::endl;
-			std::cout << "float: " << arg << std::endl;
+			std::cout << "float: " << arg << "f" << std::endl;
 			std::cout << "double: " << arg << std::endl;
 			break ;
 		}
