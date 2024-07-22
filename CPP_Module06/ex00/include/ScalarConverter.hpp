@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 14:53:33 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/22 11:50:53 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/22 13:30:25 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,7 @@ class	ScalarConverter
 		ScalarConverter& operator = (ScalarConverter &other);
 	public:
 		~ScalarConverter();
-		void	convert(std::string arg);
-		int		getType(std::string arg);
+		static void	convert(std::string arg);
 };
 
 #endif
