@@ -1,4 +1,4 @@
-NAME = convert
+NAME = Serializer
 
 CC = c++
 
@@ -7,7 +7,8 @@ FLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -rf
 
 SRCS = main.cpp\
-		./src/ScalarConverter.cpp\
+		./src/Serializer.cpp\
+		./src/Data.cpp\
 
 OBJS = $(SRCS:.cpp=.o)
 
