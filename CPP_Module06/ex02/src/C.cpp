@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/22 17:19:18 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/22 17:36:48 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/23 13:18:32 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ C::~C()
 {	
 }
 
-std::string	getType()
+std::string	C::getType() const
 {
 	return (this->type);
 }
