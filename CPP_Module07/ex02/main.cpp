@@ -6,12 +6,12 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/23 13:23:28 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/24 12:20:29 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/25 13:00:20 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include <Array.hpp>
+#include <./include/Array.hpp>
 
 #define MAX_VAL 750
 int main(int, char**)
