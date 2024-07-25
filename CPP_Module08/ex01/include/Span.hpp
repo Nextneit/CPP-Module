@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 16:09:15 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/25 16:54:43 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/25 17:20:46 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include <vector>
 # include <iostream>
+# include <limits.h>
+# include <algorithm>
 class	Span
 {
 	private:
