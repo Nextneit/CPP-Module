@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 16:09:15 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/25 17:20:46 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/25 17:45:06 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ class	Span
 		void	addNumber(int n);
 		int		shortestSpan();
 		int		longestSpan();
+		void	addNumber(std::vector<int>::const_iterator begin, std::vector<int>::const_iterator end);
 	class SizeLimit : public std::exception
 	{
 		const char * what() const throw();
