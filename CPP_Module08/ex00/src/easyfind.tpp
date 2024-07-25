@@ -1,19 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   easyfind.hpp                                       :+:      :+:    :+:   */
+/*   easyfind.tpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/25 13:22:47 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/25 14:58:54 by ncruz-ga         ###   ########.fr       */
+/*   Created: 2024/07/25 14:47:00 by ncruz-ga          #+#    #+#             */
+/*   Updated: 2024/07/25 14:47:13 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef EASYFIND_HPP
-# define EASYFIND_HPP
+#include "../include/easyfind.hpp"
 
-
-
-# include "../src/easyfind.tpp"
-#endif

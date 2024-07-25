@@ -6,7 +6,13 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 13:22:50 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/25 13:22:51 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/25 14:47:53 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "./include/easyfind.hpp"
+
+int	main()
+{
+
+}
