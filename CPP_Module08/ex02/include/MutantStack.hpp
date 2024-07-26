@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 17:50:42 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/25 18:32:57 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/26 12:35:43 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,22 @@
 # include <stack>
 
 template<typename T>
-class	MutanStack: public std::stack<T>
+class	MutantStack: public std::stack<T>
 {
 	public:
 		typedef	typename std::stack<T>::container_type::iterator	iterator;
 		MutantStack();
-		MutanStack(const MutanStack &original);
-		MutanStack&	operator = (const MutanStack &other);
-		~MutanStack();
+		MutantStack(const MutantStack &original);
+		MutantStack&	operator = (const MutantStack &other);
+		~MutantStack();
+		iterator	begin()
+		{
+			return (this->c.begin());
+		}
+		iterator	end()
+		{
+			return (this->c.end());
+		}
 			
 };
 
