@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 17:50:48 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/25 18:28:15 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/29 11:47:25 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int main()
 	MutantStack<int>::iterator it = mstack.begin();
 	MutantStack<int>::iterator ite = mstack.end();
 	++it;
-	--it;
+	--ite;
 	while (it != ite)
 	{
 		std::cout << *it << std::endl;
