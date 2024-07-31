@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 16:12:09 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/31 13:03:11 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/31 13:05:42 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,21 @@ int	main()
 	{
 		std::cerr << e.what() << std::endl;
 	}
-	Span sp2(5);
-	std::vector<int> ar;
-	ar.push_back(9);
-	ar.push_back(2);
-	ar.push_back(4);
-	ar.push_back(7);
-	sp2.addNumber(ar.begin(), ar.end());
-	std::cout << sp2.shortestSpan() << std::endl;
-	std::cout << sp2.longestSpan() << std::endl;
+	try
+	{
+		Span sp2(5);
+		std::vector<int> ar;
+		ar.push_back(9);
+		ar.push_back(2);
+		ar.push_back(4);
+		ar.push_back(7);
+		sp2.addNumber(ar.begin(), ar.end());
+		std::cout << sp2.shortestSpan() << std::endl;
+		std::cout << sp2.longestSpan() << std::endl;
+	}
+	catch(std::exception& e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
 	return (0);
 }
