@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 16:09:07 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/25 17:43:33 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/31 10:20:07 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,16 @@ void	Span::addNumber(int n)
 	this->array.push_back(n);
 }
 
+void	Span::addNumber(std::vector<int>::const_iterator begin, std::vector<int>::const_iterator end)
+{
+	if (this->array.size() + std::distance(begin, end) > this->size)
+		throw SizeLimit();
+	this->array.insert(this->array.end(), begin, end);
+}
+
 const char * Span::SizeLimit::what() const throw()
 {
-	return "Size limit exceded";
+	return ("Size limit exceded");
 }
 
 int	Span::shortestSpan()
@@ -87,11 +94,4 @@ int	Span::longestSpan()
 		i = begin + 1;
 	}
 	return (res);
-}
-
-void	Span::addNumber(std::vector<int>::const_iterator begin, std::vector<int>::const_iterator end)
-{
-	if (this->array.size() + std::distance(begin, end) > this->size)
-		throw SizeLimit();
-	this->array.insert(this->array.end(), begin, end);
 }
