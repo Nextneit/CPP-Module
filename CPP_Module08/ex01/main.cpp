@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 16:12:09 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/31 13:05:42 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/31 13:07:00 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ int	main()
 		sp.addNumber(17);
 		sp.addNumber(9);
 		sp.addNumber(11);
+		//sp.addNumber(1);
 		std::cout << sp.shortestSpan() << std::endl;
 		std::cout << sp.longestSpan() << std::endl;
 	}
