@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 16:09:07 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/31 10:20:07 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/31 13:02:50 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,19 @@ const char * Span::SizeLimit::what() const throw()
 	return ("Size limit exceded");
 }
 
+const char * Span::OneNumber::what() const throw()
+{
+	return ("Only one number");
+}
+
+const char * Span::NoNumber::what() const throw()
+{
+	return ("No number");
+}
+
 int	Span::shortestSpan()
 {
+
 	std::sort(this->array.begin(), this->array.end());
 	std::vector<int>::iterator begin = this->array.begin();
 	std::vector<int>::iterator	i = begin + 1;
@@ -73,6 +84,10 @@ int	Span::shortestSpan()
 		begin++;
 		i = begin + 1;
 	}
+	if (this->array.size() == 0)
+		throw NoNumber();
+	if (res == INT_MAX)
+		throw OneNumber();
 	return (res);
 }
 
@@ -93,5 +108,9 @@ int	Span::longestSpan()
 		begin++;
 		i = begin + 1;
 	}
+	if (this->array.size() == 0)
+		throw NoNumber();
+	if (res == INT_MIN)
+		throw OneNumber();
 	return (res);
 }

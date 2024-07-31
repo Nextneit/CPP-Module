@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/25 16:09:15 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/31 10:20:19 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/07/31 12:56:54 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,14 @@ class	Span
 		int		longestSpan();
 		void	addNumber(std::vector<int>::const_iterator begin, std::vector<int>::const_iterator end);
 	class SizeLimit : public std::exception
+	{
+		const char * what() const throw();
+	};
+	class OneNumber : public std::exception
+	{
+	const char * what() const throw();
+	};
+	class NoNumber : public std::exception
 	{
 		const char * what() const throw();
 	};
