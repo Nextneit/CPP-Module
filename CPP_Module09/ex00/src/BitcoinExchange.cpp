@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/26 12:51:21 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/08/05 16:34:28 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/08/05 18:22:20 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,9 +54,10 @@ BitcoinExchange::BitcoinExchange(std::string &data, std::string &input)
 
 static void	saveDataStream(std::string &str, BitcoinExchange &btc)
 {
-	std::string	date = str.substr(0, str.find(",", 0));
-	double	value = atof((str.substr(str.find(",", 0) + 1, str.length() - str.find(",", 0) + 1)).c_str());
-	
+	int	i = str.find(",", 0)
+	std::string	date = str.substr(0, i);
+	double	value = atof((str.substr(i + 1, str.length() - i + 1)).c_str());
+	btc.setDataBase(date, value);
 }
 
 BitcoinExchange::openFile(std::ifstream &dataStream, std::ifstream &inputStream)
