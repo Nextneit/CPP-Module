@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/26 12:51:21 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/08/05 14:09:20 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/08/05 16:34:28 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ BitcoinExchange&	BitcoinExchange:: operator = (const BitcoinExchange &other)
 {
 	if (this != &other)
 		this->dataBase = other.dataBase
+	return (*this);
 }
 
 BitcoinExchange::BitcoinExchange(BitcoinExchange &original)
@@ -51,6 +52,13 @@ BitcoinExchange::BitcoinExchange(std::string &data, std::string &input)
 	this->openFile(dataStream, inputStream);
 }
 
+static void	saveDataStream(std::string &str, BitcoinExchange &btc)
+{
+	std::string	date = str.substr(0, str.find(",", 0));
+	double	value = atof((str.substr(str.find(",", 0) + 1, str.length() - str.find(",", 0) + 1)).c_str());
+	
+}
+
 BitcoinExchange::openFile(std::ifstream &dataStream, std::ifstream &inputStream)
 {
 	std::string	str = NULL;
@@ -64,5 +72,6 @@ BitcoinExchange::openFile(std::ifstream &dataStream, std::ifstream &inputStream)
 	while (inputStream.good())
 	{
 		std::getline(inputStream, str);
+		saveInputStream(str, *this);
 	}
 }
