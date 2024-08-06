@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 10:45:40 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/19 12:10:00 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/08/06 16:28:58 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ bool	ShrubberyCreationForm::execute(Bureaucrat const &executor) const
 		if (!this->getIsSigned())
 			throw AForm::FormNotSignedException();
 		else if (executor.getGrade() > this->getExeGrade())
-			throw AForm::GradeToLowException();
+			throw AForm::GradeTooLowException();
 		std::string name(this->target + "_shrubbery");
 		std::ofstream out(name.c_str());
 		out << "               ,@@@@@@@," << std::endl;

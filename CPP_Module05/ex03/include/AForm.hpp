@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 15:24:44 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/19 11:55:23 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/08/06 16:28:05 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ class	AForm
 		bool	getIsSigned() const;
 		void	beSigned(Bureaucrat &b);
 		virtual bool execute(Bureaucrat const &executor) const = 0;
-		class	GradeToHighException: public std::exception
+		class	GradeTooHighException: public std::exception
 		{
 			public:
 				const char	*what() const throw()
@@ -45,7 +45,7 @@ class	AForm
 					return ("grade to high.");
 				};
 		};
-		class	GradeToLowException: public std::exception
+		class	GradeTooLowException: public std::exception
 		{
 			public:
 				const char	*what() const throw()

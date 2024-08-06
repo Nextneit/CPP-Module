@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 11:46:55 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/19 11:49:12 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/08/06 16:27:30 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ Bureaucrat::Bureaucrat(): name("Default")
 Bureaucrat::Bureaucrat(std::string const name, int grade): name(name)
 {
 	if (grade < 1)
-		throw Bureaucrat::GradeToLowException();
+		throw Bureaucrat::GradeTooLowException();
 	else if (grade > 150)
-		throw Bureaucrat::GradeToHighException();
+		throw Bureaucrat::GradeTooHighException();
 	this->grade = grade;
 }
 
@@ -35,9 +35,9 @@ Bureaucrat& Bureaucrat::operator = (const Bureaucrat &other)
 	if (this != &other)
 	{
 		if (other.grade <= 0)
-			throw Bureaucrat::GradeToLowException();
+			throw Bureaucrat::GradeTooLowException();
 		else if (other.grade > 150)
-			throw Bureaucrat::GradeToHighException();
+			throw Bureaucrat::GradeTooHighException();
 		else
 			this->grade = other.grade;
 	}
@@ -63,14 +63,14 @@ int	Bureaucrat::getGrade() const
 void	Bureaucrat::increment()
 {
 	if (this->grade -1 < 1)
-		throw Bureaucrat::GradeToLowException();
+		throw Bureaucrat::GradeTooLowException();
 	this->grade -= 1;
 }
 
 void	Bureaucrat::decrement()
 {
 	if (this->grade + 1 > 150)
-		throw Bureaucrat::GradeToHighException();
+		throw Bureaucrat::GradeTooHighException();
 	this->grade += 1;
 }
 
@@ -84,9 +84,9 @@ void	Bureaucrat::signForm(AForm &f)
 	try
 	{
 		if (this->grade <= 0)
-			throw Bureaucrat::GradeToLowException();
+			throw Bureaucrat::GradeTooLowException();
 		else if (this->grade > 150)
-			throw Bureaucrat::GradeToHighException();
+			throw Bureaucrat::GradeTooHighException();
 		f.beSigned(*this);
 		std::cout << this->name << " signed " << f.getName() << "." << std::endl;
 	}

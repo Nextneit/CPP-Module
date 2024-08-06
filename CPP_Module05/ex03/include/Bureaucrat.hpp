@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 11:46:53 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/19 11:39:55 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/08/06 16:26:40 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,12 @@ class   Bureaucrat
 		void	decrement();
 		void	signForm(AForm &f);
 		void	executeForm(AForm const &f);
-		class	GradeToHighException: public std::exception
+		class	GradeTooHighException: public std::exception
 		{
 			public:
 				const char	*what() const throw()
 				{
-					return ("Grade To High.");
+					return ("Grade Too High.");
 				}
 		};
 		class	GradeToLowException: public std::exception
@@ -48,7 +48,7 @@ class   Bureaucrat
 			public:
 				const char	*what() const throw()
 				{
-					return ("Grade To Low.");
+					return ("Grade Too Low.");
 				}
 		};
 };

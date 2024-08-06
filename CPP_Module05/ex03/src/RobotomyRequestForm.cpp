@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 10:46:04 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/19 12:09:43 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/08/06 16:28:53 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ bool	RobotomyRequestForm::execute(Bureaucrat const &executor) const
 		if (!this->getIsSigned())
 			throw AForm::FormNotSignedException();
 		else if (executor.getGrade() > this->getExeGrade())
-			throw AForm::GradeToLowException();
+			throw AForm::GradeTooLowException();
 		if (i)
 			std::cout << target << " has been robotomized." << std::endl;
 		else
