@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/26 12:51:21 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/08/08 12:57:47 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/08/08 16:22:41 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,9 +52,30 @@ BitcoinExchange::BitcoinExchange(std::string &data, std::string &input)
 	this->openFile(dataStream, inputStream);
 }
 
-void	BitcoinExchange::getDataValue(std::string date, std::string value)
+void	print(std::map<std::string, double>::iterator &it, std::string date, const double value)
 {
+	std::cout << date << " => " << value << " = " << value * it->second << std::endl; 
+}
 
+void	BitcoinExchange::getDataValue(std::string date, const double &value)
+{
+	std::map<std::string, double>::iterator it = this->dataBase.begin();
+	try
+	{
+		if (date < it->first)
+			throw (BitcoinExchange::DataNotFound());
+		it = this->dataBase.lower_bound(date);
+		if (it != dataBase.begin())
+		{
+			if (it->first != date)
+				it--;
+			print(it, date, value);
+		}
+	}
+	catch (std::exception &e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
 }
 
 static bool	checkDay(int year, int month, int day)
@@ -153,7 +174,7 @@ static void	saveInputStream(std::string &str, BitcoinExchange &btc)
 			if (nbr < 0.0)
 				throw (BitcoinExchange::NegativeValueException());
 			checkDate(date);
-			btc.getDataValue(date, value);
+			btc.getDataValue(date, nbr);
 		}
 	}
 	catch (const std::exception& e)

@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/26 12:51:24 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/08/08 12:13:22 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/08/08 16:25:23 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,25 +30,33 @@ class	BitcoinExchange
 		BitcoinExchange(std::string &data, std::string &input);
 		void	openFile(std::ifstream &dataStream, std::ifstream &inputStream);
 		void	setDataBase(const std::string &date, const double &value);
+		void	getDataValue(std::string date, const double &value);
 		class	BadDateException : public std::exception
 		{
 			const char	*what() const throw()
 			{
-				return ("Bad date input.");
+				return ("Error: bad input");
 			}
 		};
 		class	ValueOutException : public std::exception
 		{
 			const char	*what() const throw()
 			{
-				return ("Value out of range.");
+				return ("Error: value out of range");
 			}
 		};
 		class	NegativeValueException : public std::exception
 		{
 			const char	*what() const throw()
 			{
-				return ("Negative value not allowed.");
+				return ("Error: negative value not allowed");
+			}
+		};
+		class	DataNotFound : public std::exception
+		{
+			const char	*what() const throw()
+			{
+				return ("Error: data not found");
 			}
 		};
 };
