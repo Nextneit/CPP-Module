@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 17:20:47 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/08/13 16:19:38 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/08/13 16:21:26 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,13 @@ class	RPN
 			const char	*what() const throw()
 			{
 				return ("Error: only one number");
+			}
+		};
+		class	Null : public std::exception
+		{
+			const char	*what() const throw()
+			{
+				return ("Error: empty argument");
 			}
 		};
 };

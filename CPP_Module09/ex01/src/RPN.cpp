@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 17:20:50 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/08/13 16:19:53 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/08/13 16:21:08 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,11 @@ RPN::RPN(std::string arg)
 {
 	size_t	i = 0;
 	int		j = 0;
-	if (arg.length() == 0)
-	{
-		std::cerr << "Error: empty argument" << std::endl;
-		return ;
-	}
+
 	try
 	{
+		if (arg.length() == 0)
+			throw (RPN::Null());
 		while (i < arg.length())
 		{
 			if (isdigit(arg[i]) != 0)
