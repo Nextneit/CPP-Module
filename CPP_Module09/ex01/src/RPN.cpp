@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 17:20:50 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/08/13 16:21:08 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/08/13 16:22:39 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,34 @@ RPN::RPN()
 RPN::RPN(RPN &original)
 {
 	this->nbrs = original.nbrs;
+}
+
+void	RPN::calculateRPN(char sign)
+{
+	double	a;
+	double	b;
+
+	if (this->nbrs.size() < 2)
+		throw (RPN::InvalidExpresion());
+	b = this->nbrs.top();
+	this->nbrs.pop();
+	a = this->nbrs.top();
+	this->nbrs.pop();
+	if (sign == '+')
+		this->nbrs.push(a + b);
+	else if (sign == '-')
+		this->nbrs.push(a - b);
+	else if (sign == '*')
+		this->nbrs.push(a * b);
+	else if (sign == '/')
+	{
+		if (a == 0 || b == 0)
+		{
+			std::cerr << "Error: division between 0 not allowed" << std::endl;
+			exit(1);
+		}
+		this->nbrs.push(a / b);
+	}
 }
 
 int	RPN::checkSign(char arg)
@@ -71,32 +99,4 @@ RPN&	RPN::operator = (RPN &other)
 	if (this != &other)
 		this->nbrs = other.nbrs;
 	return (*this);
-}
-
-void	RPN::calculateRPN(char sign)
-{
-	double	a;
-	double	b;
-
-	if (this->nbrs.size() < 2)
-		throw (RPN::InvalidExpresion());
-	b = this->nbrs.top();
-	this->nbrs.pop();
-	a = this->nbrs.top();
-	this->nbrs.pop();
-	if (sign == '+')
-		this->nbrs.push(a + b);
-	else if (sign == '-')
-		this->nbrs.push(a - b);
-	else if (sign == '*')
-		this->nbrs.push(a * b);
-	else if (sign == '/')
-	{
-		if (a == 0 || b == 0)
-		{
-			std::cerr << "Error: division between 0 not allowed" << std::endl;
-			exit(1);
-		}
-		this->nbrs.push(a / b);
-	}
 }
