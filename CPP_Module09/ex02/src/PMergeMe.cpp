@@ -1,28 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PMerge.hpp                                         :+:      :+:    :+:   */
+/*   PMergeMe.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/13 16:33:15 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/08/14 12:11:19 by ncruz-ga         ###   ########.fr       */
+/*   Created: 2024/08/13 16:33:18 by ncruz-ga          #+#    #+#             */
+/*   Updated: 2024/08/19 11:19:17 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PMERGE_HPP
-# define PMERGE_HPP
+#include "../include/PMergeMe.hpp"
 
-# include <iostream>
-# include <vector>
-# include <list>
-
-class	PMerge
+PMergeMe::PMergeMe()
 {
-	private:
+}
 
-	public:
+PMergeMe::~PMergeMe()
+{
+}
+
+PMergeMe::PMergeMe(const PMergeMe& original)
+{
+
+}
+
+PMergeMe&	PMergeMe::operator = (const PMergeMe &other)
+{
+	if (this != &other)
+	{
 		
-};
-
-#endif
+	}
+	return (*this);
+}
