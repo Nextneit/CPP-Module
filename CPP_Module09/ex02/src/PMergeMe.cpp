@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/13 16:33:18 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/08/19 11:19:17 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/08/19 11:25:20 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ PMergeMe::~PMergeMe()
 
 PMergeMe::PMergeMe(const PMergeMe& original)
 {
-
+	this = original;
 }
 
 PMergeMe&	PMergeMe::operator = (const PMergeMe &other)
@@ -32,4 +32,9 @@ PMergeMe&	PMergeMe::operator = (const PMergeMe &other)
 		
 	}
 	return (*this);
+}
+
+PMergeMe::PMergeMe(char **arg)
+{
+
 }
