@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/13 16:33:15 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/08/19 17:49:05 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/08/19 18:07:15 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,9 @@ class	PMergeMe
 		~PMergeMe();
 		PMergeMe&	operator = (const PMergeMe& other);
 		PMergeMe(const PMergeMe& original);
+		void	printlist();
+		void	sortList();
+		int		getLen();
 	class	NotANumber : public std::exception
 	{
 		const char	*what() const throw()

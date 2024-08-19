@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/13 16:33:20 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/08/19 16:50:03 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/08/19 18:06:47 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,19 @@ int	main(int argc, char **argv)
 	try
 	{
 		PMergeMe	p(argv);
+		std::cout << "Before: ";
+		p.printlist();
 		
+		struct timeval	start;
+		gettimeofday(&start, NULL);
+		
+		p.sortList();
+
+		struct timeval	end;
+		gettimeofday(&end, NULL);
+		
+		long	timelist = end.tv_usec - start.tv_usec;
+		std::cout << "time to process a range of "<< p.getLen() << " elements with std::list : " << timelist << " us." << std::endl;
 	}
 	catch (const std::exception &e)
 	{

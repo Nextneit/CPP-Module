@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/13 16:33:18 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/08/19 17:49:50 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/08/19 18:12:08 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,4 +62,26 @@ PMergeMe::PMergeMe(char **arg)
 		i++;
 	}
 	len = i;
+}
+
+void	PMergeMe::printlist()
+{
+	std::list<long int>::const_iterator it = this->list.begin();
+	while (it != this->list.end())
+	{
+		std::cout << *it << " ";
+		it++;
+	}
+	std::cout << std::endl;
+}
+
+static void	ListSort()
+void	PMergeMe::sortList()
+{
+	ListSort(this->list.begin(), this->list.end());
+}
+
+int		PMergeMe::getLen()
+{
+	return (this->len);
 }
