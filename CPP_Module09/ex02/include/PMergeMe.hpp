@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/13 16:33:15 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/08/19 18:07:15 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/08/22 17:18:34 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ class	PMergeMe
 		void	printlist();
 		void	sortList();
 		int		getLen();
+		void	SortList();
 	class	NotANumber : public std::exception
 	{
 		const char	*what() const throw()

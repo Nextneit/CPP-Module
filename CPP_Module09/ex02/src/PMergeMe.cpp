@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/13 16:33:18 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/08/20 16:15:38 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/08/22 17:19:15 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,16 +75,57 @@ void	PMergeMe::printlist()
 	std::cout << std::endl;
 }
 
+static void	mergeList(std::list<long int>::iterator b_it, std::list<long int>::iterator e_it, std::list<long int>::iterator m_it)
+{
+	std::list<long int>				first_half(b_it, m_it);
+	std::list<long int>				last_half(m_it, e_it);
+	std::list<long int>::iterator	it = b_it;
+	std::list<long int>::iterator	fh_it = first_half.begin();
+	std::list<long int>::iterator	lh_it = last_half.begin();
 
+	while (fh_it != first_half.end() && lh_it != last_half.end())
+	{
+		if (*fh_it <= *lh_it)
+		{
+			*it = *fh_it;
+			fh_it++;
+		}
+		else
+		{
+			*it = *lh_it;
+			lh_it++;
+		}
+		it++;
+	}
+	while (fh_it != first_half.end())
+	{
+		*it = *fh_it;
+		fh_it++;
+		it++;
+	}
+	while (lh_it != last_half.end())
+	{
+		*it = *lh_it;
+		lh_it++;
+		it++;
+	}
+}
 
-void	sortList(std::list<long int>::iterator	b_it, std::list<long int>::iterator	e_it)
+static void	RecursiveSortList(std::list<long int>::iterator	b_it, std::list<long int>::iterator	e_it)
 {
 	if (std::distance(b_it, e_it) > 1)
 	{
 		std::list<long int>::iterator	m_it = b_it;
 		std::advance(m_it, std::distance(b_it, e_it) / 2);
-		
+		RecursiveSortList(b_it, m_it);
+		RecursiveSortList(m_it, e_it);
+		mergeList(b_it, e_it, m_it);
 	}
+}
+
+void	PMergeMe::SortList()
+{
+	RecursiveSortList(this->list.begin(), this->list.end());
 }
 
 int		PMergeMe::getLen()
