@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/13 16:33:18 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/08/22 17:19:15 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/08/27 15:57:13 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,6 +126,60 @@ static void	RecursiveSortList(std::list<long int>::iterator	b_it, std::list<long
 void	PMergeMe::SortList()
 {
 	RecursiveSortList(this->list.begin(), this->list.end());
+}
+
+
+static void	mergeVector(std::vector<long int>::iterator b_it, std::vector<long int>::iterator e_it, std::vector<long int>::iterator m_it)
+{
+	std::vector<long int>				first_half(b_it, m_it);
+	std::vector<long int>				last_half(m_it, e_it);
+	std::vector<long int>::iterator	it = b_it;
+	std::vector<long int>::iterator	fh_it = first_half.begin();
+	std::vector<long int>::iterator	lh_it = last_half.begin();
+
+	while (fh_it != first_half.end() && lh_it != last_half.end())
+	{
+		if (*fh_it <= *lh_it)
+		{
+			*it = *fh_it;
+			fh_it++;
+		}
+		else
+		{
+			*it = *lh_it;
+			lh_it++;
+		}
+		it++;
+	}
+	while (fh_it != first_half.end())
+	{
+		*it = *fh_it;
+		fh_it++;
+		it++;
+	}
+	while (lh_it != last_half.end())
+	{
+		*it = *lh_it;
+		lh_it++;
+		it++;
+	}
+}
+
+static void	RecursiveSortVector(std::vector<long int>::iterator	b_it, std::vector<long int>::iterator	e_it)
+{
+	if (std::distance(b_it, e_it) > 1)
+	{
+		std::vector<long int>::iterator	m_it = b_it;
+		std::advance(m_it, std::distance(b_it, e_it) / 2);
+		RecursiveSortVector(b_it, m_it);
+		RecursiveSortVector(m_it, e_it);
+		mergeVector(b_it, e_it, m_it);
+	}
+}
+
+void	PMergeMe::SortVector()
+{
+	RecursiveSortVector(this->vect.begin(), this->vect.end());
 }
 
 int		PMergeMe::getLen()
