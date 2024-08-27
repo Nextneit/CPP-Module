@@ -21,7 +21,7 @@ AForm::AForm(std::string const name, int grade_to_sign, int grade_to_exe): name(
 	if (grade_to_sign < 1 || grade_to_exe < 1)
 		throw AForm::GradeTooLowException();
 	else if (grade_to_sign > 150 || grade_to_exe > 150)
-		throw AForm::GradeToHighException();
+		throw AForm::GradeTooHighException();
 	this->sign = false;
 }
 

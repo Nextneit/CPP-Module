@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 11:46:53 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/08/06 16:26:40 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/08/27 18:04:23 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ class   Bureaucrat
 					return ("Grade Too High.");
 				}
 		};
-		class	GradeToLowException: public std::exception
+		class	GradeTooLowException: public std::exception
 		{
 			public:
 				const char	*what() const throw()
