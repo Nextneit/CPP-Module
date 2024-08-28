@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 11:45:32 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/08/28 11:38:39 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/08/28 11:44:52 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int main()
 		std::cout << *f2 << std::endl;
 		std::cout << *f3 << std::endl;
 		std::cout << std::endl;
-		rf = random.makeForm("PresidentialPardonForm", "Bender");
+		rf = random.makeForm("Padadad", "Bender");
 		if (rf)
 			std::cout << *rf << std::endl << std::endl;
 	}
