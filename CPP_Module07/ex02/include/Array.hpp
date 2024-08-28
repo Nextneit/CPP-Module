@@ -6,12 +6,15 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 13:04:15 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/25 13:17:15 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/08/28 11:46:22 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ARRAY_HPP
 # define ARRAY_HPP
+
+#include <iostream>
+#include <stdlib.h>
 
 template<typename T>
 
