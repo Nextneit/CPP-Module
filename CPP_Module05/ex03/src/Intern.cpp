@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 12:56:39 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/08/27 18:07:06 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/08/28 11:36:22 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,9 @@ AForm*	Intern::makeForm(std::string s, std::string name)
 			return (f);
 		}
 		default:
+		{
 			std::cout << "Incorrect form." << std::endl;
+		}
 	}
-	return (f);
+	return (NULL);
 }

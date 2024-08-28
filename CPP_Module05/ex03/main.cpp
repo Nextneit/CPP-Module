@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 11:45:32 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/08/27 18:47:06 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/08/28 11:38:39 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,14 +55,9 @@ int main()
 		std::cout << *f2 << std::endl;
 		std::cout << *f3 << std::endl;
 		std::cout << std::endl;
-		rf = random.makeForm("hugjgj", "Bender");
+		rf = random.makeForm("PresidentialPardonForm", "Bender");
 		if (rf)
 			std::cout << *rf << std::endl << std::endl;
-		std::cout << "--------COPY TEST---------" << std::endl;
-		s1 = new ShrubberyCreationForm("prueba");
-		s2 = new ShrubberyCreationForm("pepe");
-		*s2 = *s1;
-		std::cout << s2->getTarget() << std::endl << s2->getName() << "\n" << s2->getExeGrade() << std::endl << s2->getExeGrade() << std::endl;
 	}
 	catch(const std::exception& e)
 	{

@@ -6,13 +6,13 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 10:46:04 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/08/06 16:28:53 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/08/28 11:33:06 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/RobotomyRequestForm.hpp"
 
-RobotomyRequestForm::RobotomyRequestForm(): AForm("RobotomyRequestForm", 72, 45)
+RobotomyRequestForm::RobotomyRequestForm(): AForm("Default", 72, 45)
 {
 	this->target = "Default";
 }

@@ -72,6 +72,8 @@ bool	AForm::getIsSigned() const
 
 std::ostream& operator << (std::ostream& out, AForm& f)
 {
+	if (f.getName() == "Default")
+		return (out << "The formulary doesn't exist." << std::endl);
 	return (out << "Name: " << f.getName() << std::endl << "Sign grade: " << f.getSignGrade() << std::endl << "Exe grade: " << f.getExeGrade() << std::endl);
 }
 

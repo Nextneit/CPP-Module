@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 10:40:01 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/19 10:50:24 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/08/28 11:29:31 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ class	RobotomyRequestForm: public AForm
 {
 	private:
 		std::string	target;
-		RobotomyRequestForm();
 	public:
+		RobotomyRequestForm();
 		RobotomyRequestForm(std::string target);
 		~RobotomyRequestForm();
 		RobotomyRequestForm(RobotomyRequestForm &original);
