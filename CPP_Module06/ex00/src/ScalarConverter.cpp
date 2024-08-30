@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 14:54:02 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/22 13:34:15 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/08/30 13:08:19 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,13 +49,16 @@ int		getType(std::string arg)
 		return (CHAR);
 	char	*eptr;
 	strtol(arg.c_str(), &eptr, 10);
-	if (eptr[0] == '\0')
+	if (arg[0] && eptr[0] == '\0')
 		return (INT);
 	strtod(arg.c_str(), &eptr);
-	if (eptr[0] == 'F' || eptr[0] == 'f')
-		return (FLOAT);
-	else if (eptr[0] == '\0')
-		return (DOUBLE);
+	if (arg[0] && !std::isalpha(arg[0]))
+	{
+		if (eptr[0] == 'F' || eptr[0] == 'f')
+			return (FLOAT);
+		else if (eptr[0] == '\0')
+			return (DOUBLE);
+	}
 	return (-1);
 }
 
