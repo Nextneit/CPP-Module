@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 12:16:08 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/24 12:39:39 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/08/30 15:50:45 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,7 @@
 template <typename T> void	iter(T *array, int size, void (*f)(T &))
 {
 	for (int i = 0; i < size; i++)
-	{
 		f (array[i]);
-	}
 }
 
 template <typename T> void	print(T &array)
