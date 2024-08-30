@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 14:54:02 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/08/30 13:08:19 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/08/30 13:32:33 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,11 @@ bool	isround(float nbr)
 
 int		getType(std::string arg)
 {
-	if (arg == "nan" || arg == "+inf" || arg == "-inf" || arg == "inf")
+	if (arg == "nan" || arg == "+inf" || arg == "-inf")
 		return (PLD);
 	if (arg == "nanf" || arg == "+inff" || arg == "-inff")
 		return (PLF);
-	if (arg.length() == 1 && std::isalpha(arg[0]) && std::isprint(arg[0]))
+	if (arg.length() == 1 && std::isalpha(arg[0]))
 		return (CHAR);
 	char	*eptr;
 	strtol(arg.c_str(), &eptr, 10);
@@ -153,16 +153,16 @@ void	ScalarConverter::convert(std::string arg)
 		}
 		case PLF:
 		{
-			std::cout << "char: non displayable" << std::endl;
-			std::cout << "int: non displayable" << std::endl;
+			std::cout << "char: impossible" << std::endl;
+			std::cout << "int: impossible" << std::endl;
 			std::cout << "float: " << arg << "f" <<std::endl;
 			std::cout << "double: " << arg.substr(0, arg.length() - 1) << std::endl;
 			break ;
 		}
 		case PLD:
 		{
-			std::cout << "char: non displayable" << std::endl;
-			std::cout << "int: non displayable" << std::endl;
+			std::cout << "char: impossible" << std::endl;
+			std::cout << "int: impossible" << std::endl;
 			std::cout << "float: " << arg << "f" << std::endl;
 			std::cout << "double: " << arg << std::endl;
 			break ;
