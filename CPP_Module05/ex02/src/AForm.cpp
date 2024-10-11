@@ -19,18 +19,18 @@ AForm::AForm(): name("Default"), grade_to_sign(1), grade_to_exe(1), sign(false)
 AForm::AForm(std::string const name, int grade_to_sign, int grade_to_exe): name(name), grade_to_sign(grade_to_sign), grade_to_exe(grade_to_exe)
 {
 	if (grade_to_sign < 1 || grade_to_exe < 1)
-		throw AForm::GradeTooLowException();
-	else if (grade_to_sign > 150 || grade_to_exe > 150)
 		throw AForm::GradeTooHighException();
+	else if (grade_to_sign > 150 || grade_to_exe > 150)
+		throw AForm::GradeTooLowException();
 	this->sign = false;
 }
 
 AForm::AForm(AForm& original): name(original.name), grade_to_sign(original.grade_to_sign), grade_to_exe(original.grade_to_exe), sign(original.sign)
 {
 	if (grade_to_sign < 1 || grade_to_exe < 1)
-		throw AForm::GradeTooLowException();
-	else if (grade_to_sign > 150 || grade_to_exe > 150)
 		throw AForm::GradeTooHighException();
+	else if (grade_to_sign > 150 || grade_to_exe > 150)
+		throw AForm::GradeTooLowException();
 }
 
 AForm& AForm::operator = (const AForm &other)
@@ -38,9 +38,9 @@ AForm& AForm::operator = (const AForm &other)
 	if (this != &other)
 	{
 		if (other.grade_to_sign < 1 || other.grade_to_exe < 1)
-			throw AForm::GradeTooLowException();
-		else if (other.grade_to_sign > 150 || other.grade_to_exe > 150)
 			throw AForm::GradeTooHighException();
+		else if (other.grade_to_sign > 150 || other.grade_to_exe > 150)
+			throw AForm::GradeTooLowException();
 		this->sign = other.sign;
 	}
 	return (*this);
