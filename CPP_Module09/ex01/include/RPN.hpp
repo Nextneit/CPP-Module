@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 17:20:47 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/08/13 16:21:26 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/10/16 18:58:11 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,13 @@ class	RPN
 			const char	*what() const throw()
 			{
 				return ("Error: only one number");
+			}
+		};
+		class	TwoNumber : public std::exception
+		{
+			const char	*what() const throw()
+			{
+				return ("Error: number bigger than 9");
 			}
 		};
 		class	Null : public std::exception
