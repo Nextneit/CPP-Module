@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 11:45:32 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/10/08 18:41:10 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/10/16 18:26:55 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ int main()
 		std::cout << "a: " << a << "\n";
 		std::cout << "b: " << b << "\n";
 		std::cout << "c: " << c << "\n";
-		d.decrement_grade();
+		d.decrement();
 		std::cout << "d: " << d << "\n";
-		e->increment_grade();
+		e->increment();
 		std::cout << "e: " << *e << "\n";
 		std::cout << *f1 << "\n";
 		std::cout << f2 << "\n";
@@ -41,7 +41,7 @@ int main()
 		std::cout << *f1 << "\n";
 		std::cout << f2 << "\n";
 		while (a.getGrade() <= 151)
-			a.decrement_grade();
+			a.decrement();
 	}
 	catch(const std::exception& e)
 	{

@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 11:46:53 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/08/06 15:23:06 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/10/16 18:28:35 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@ class   Bureaucrat
 					return ("Grade Too Low.");
 				}
 		};
-		void	signForm(Form &f);
 };
 
 std::ostream& operator << (std::ostream& out, const Bureaucrat& b);
