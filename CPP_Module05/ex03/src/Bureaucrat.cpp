@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 11:46:55 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/10/11 13:57:12 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/10/16 18:38:09 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ std::ostream& operator << (std::ostream& out, const Bureaucrat& b)
 	return (out << b.getName() << ", bureaucrat grade " << b.getGrade() << "." << std::endl);
 }
 
-void	Bureaucrat::signForm(Form &f)
+void	Bureaucrat::signForm(AForm &f)
 {
 	try
 	{
