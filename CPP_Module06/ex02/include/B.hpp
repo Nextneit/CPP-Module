@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/22 17:18:54 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/23 13:13:55 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/10/16 18:47:39 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,8 @@
 
 class	B : public Base
 {
-	private:
-		std::string	type;
 	public:
-		B();
-		~B();
-		std::string	getType() const;
+		virtual ~B();
 };
 
 #endif

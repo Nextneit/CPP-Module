@@ -6,22 +6,12 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/22 17:19:21 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/07/23 13:17:33 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/10/16 18:46:36 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/A.hpp"
 
-A::A()
-{
-	this->type = "A";
-}
-
 A::~A()
 {	
-}
-
-std::string	A::getType() const
-{
-	return (this->type);
 }
