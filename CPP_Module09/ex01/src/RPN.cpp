@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 17:20:50 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/10/16 18:58:19 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/10/16 19:00:27 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ RPN::RPN(std::string arg)
 			else if (this->checkSign(arg[i]) == 0)
 				this->calculateRPN(arg[i]);
 			if (isdigit(arg[i]) != 0 && isdigit(arg[i + 1]) != 0)
-				throw (RPN::TwoNumber());//excepcion de numeros mayor de 9
+				throw (RPN::TwoNumber());
 			i++;
 		}
 		if (this->nbrs.size() != 1)
