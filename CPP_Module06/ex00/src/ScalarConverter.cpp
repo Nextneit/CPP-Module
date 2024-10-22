@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 14:54:02 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/08/30 13:32:33 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/10/22 18:53:44 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int		getType(std::string arg)
 		return (CHAR);
 	char	*eptr;
 	strtol(arg.c_str(), &eptr, 10);
-	if (arg[0] && eptr[0] == '\0')
+	if (arg[0] && arg[0] == '\0')
 		return (INT);
 	strtod(arg.c_str(), &eptr);
 	if (arg[0] && !std::isalpha(arg[0]))
@@ -78,6 +78,7 @@ void	ScalarConverter::convert(std::string arg)
 		case INT:
 		{
 			int		i = atoi(arg.c_str());
+			std::cout << i << std::endl;
 			std::cout << "char: ";
 			if (isprint(static_cast<char>(i)))
 				std::cout << "'" << static_cast<char>(i) << "'" << std::endl;
