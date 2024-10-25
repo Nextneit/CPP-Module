@@ -6,7 +6,7 @@
 /*   By: ncruz-ga <ncruz-ga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 14:54:02 by ncruz-ga          #+#    #+#             */
-/*   Updated: 2024/10/25 17:16:15 by ncruz-ga         ###   ########.fr       */
+/*   Updated: 2024/10/25 18:40:37 by ncruz-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,8 +71,8 @@ void	ScalarConverter::convert(std::string arg)
 			char	c = arg[0];
 			std::cout << "char: '" << c << "'" << std::endl;
 			std::cout << "int: " << static_cast<int>(c) << std::endl;
-			std::cout << "float: " << static_cast<float>(c) << std::endl;
-			std::cout << "double: " << static_cast<double>(c) << std::endl;
+			std::cout << "float: " << static_cast<float>(c) << ".0f" << std::endl;
+			std::cout << "double: " << static_cast<double>(c) << ".0" << std::endl;
 			break ;
 		}
 		case INT:
